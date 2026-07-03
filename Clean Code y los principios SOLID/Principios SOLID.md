@@ -1,0 +1,16 @@
+
+
+
+# Principios S.O.L.I.D. (Ejemplos JS/TS)
+
+| 1. Palabras Clave / Preguntas                                    | 2. Notas detalladas y ejemplos de código                                                                                                                                                                                                                                                                                                  |
+| :--------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **(S) Single Responsibility (SRP)**<br>Responsabilidad Única     | Una clase hace **solo una cosa** [5, 22].<br><br>`// ❌ MAL (Hace demasiado):`<br>`class User {`<br>&nbsp;&nbsp;`saveToDB() {}`<br>&nbsp;&nbsp;`sendEmail() {}`<br>`}`<br><br>`// ✅ BIEN:`<br>`class UserService { /* lógica usuario */ }`<br>`class EmailProvider { /* lógica correos */ }`                                               |
+| **(O) Open / Closed (OCP)**<br>Abierto y Cerrado                 | Abierto a extensión, cerrado a modificación [5, 22]. Usa el polimorfismo o patrón adaptador [23, 24].<br><br>`// ❌ MAL: Llenar de 'ifs' para agregar descuentos.`<br>`// ✅ BIEN: Inyectar la estrategia.`<br>`class HttpClient { /* Adaptador de Axios */ }`                                                                              |
+| **(L) Liskov Substitution (LSP)**<br>Sustitución de Liskov       | Una subclase debe reemplazar a su padre sin romper nada [5, 25].<br><br>`// ❌ MAL:`<br>`Ostrich.fly(); // Error: El avestruz no vuela.`<br><br>`// ✅ BIEN:`<br>`// Solo las aves voladoras (FlyingBird) heredan fly().`                                                                                                                   |
+| **(I) Interface Segregation (ISP)**<br>Segregación de Interfaces | No obligues a implementar métodos inútiles [5, 26, 27].<br><br>`// ❌ MAL: Interfaz Dios (God Object).`<br>`class Bot implements Worker { eat() {} } // Un bot no come.`<br><br>`// ✅ BIEN: Separar interfaces:`<br>`// Workable y Eatable por separado.`                                                                                  |
+| **(D) Dependency Inversion (DIP)**<br>Inversión de Dependencias  | Inyecta dependencias desde afuera [5, 28, 29].<br><br>`// ❌ MAL (Código acoplado):`<br>`class UserService { db = new MongoDb(); }`<br><br>`// ✅ BIEN (Inyección vía constructor):`<br>`class UserService {`<br>&nbsp;&nbsp;`constructor(database: Database) {`<br>&nbsp;&nbsp;&nbsp;&nbsp;`this.db = database;`<br>&nbsp;&nbsp;`}`<br>`}` |
+
+> **3. Resumen (Síntesis)**
+> Aplicar SOLID convierte tu código en un sistema altamente escalable. SRP divide la lógica; OCP evita tocar código viejo usando polimorfismo; LSP asegura que las subclases no rompan la lógica base; ISP divide las grandes interfaces; y DIP desconecta las capas inyectando abstracciones por el constructor en lugar de instanciar bases de datos directas [28, 30, 31].
+> **Conexiones:** [[Code Smells y STUPID]], [[Clean Code]]
