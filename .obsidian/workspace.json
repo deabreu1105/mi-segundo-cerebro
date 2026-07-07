@@ -6,40 +6,37 @@
       {
         "id": "ec216b4f5cf1c00f",
         "type": "tabs",
-        "dimension": 69.68056307525717,
+        "dimension": 55.28455284552846,
         "children": [
           {
             "id": "4766c6e4e27d6623",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bienvenido.md",
+                "file": "Clean Code y los principios SOLID/Índice Clean Code y SOLID.md",
                 "mode": "source",
                 "source": false
               },
-              "pinned": true,
               "icon": "lucide-file",
-              "title": "Bienvenido"
+              "title": "Índice Clean Code y SOLID"
             },
-            "group": "9758d903fc16981c"
+            "group": "3edf64d219d30365"
           }
         ]
       },
       {
-        "id": "e985ae8743b45c44",
+        "id": "bf0529efc6634dc3",
         "type": "tabs",
-        "dimension": 30.319436924742828,
+        "dimension": 44.71544715447154,
         "children": [
           {
-            "id": "d7552d7f8cf3e490",
+            "id": "895bbc8a6659a885",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Bienvenido.md",
+                "file": "Clean Code y los principios SOLID/Índice Clean Code y SOLID.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -62,15 +59,14 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1,
+                  "scale": 1.5,
                   "close": true
                 }
               },
-              "pinned": true,
               "icon": "lucide-git-fork",
-              "title": "Gráfico de Bienvenido"
+              "title": "Gráfico de Índice Clean Code y SOLID"
             },
-            "group": "9758d903fc16981c"
+            "group": "3edf64d219d30365"
           }
         ]
       }
@@ -129,7 +125,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "7de31c842e50cca6",
@@ -145,6 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Clean Code y los principios SOLID/Índice Clean Code y SOLID.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +151,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
+              "title": "Enlaces entrantes de Índice Clean Code y SOLID"
             }
           },
           {
@@ -219,7 +216,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 369.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,11 +226,17 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "2ad65f8d446058b5",
+  "active": "895bbc8a6659a885",
   "lastOpenFiles": [
+    "Clean Code y los principios SOLID/Code Smells y STUPID.md",
+    "Clean Code y los principios SOLID/Índice Clean Code y SOLID.md",
+    "Clean Code y los principios SOLID/Principios SOLID.md",
+    "Clean Code y los principios SOLID/Clean Code y Variables.md",
+    "La IA como tutor personalizado/00_Indice_MOC.md",
     "Bienvenido.md",
     "Sin título.md",
     "Sin título 1.base",
