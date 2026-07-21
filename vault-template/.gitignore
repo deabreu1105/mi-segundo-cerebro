@@ -1,0 +1,19 @@
+# Obsidian workspace state (cambia constantemente, no vale la pena versionar)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Cache de plugins
+.obsidian/plugins/*/data.json
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+
+# Nota: SÍ versionar:
+# - .obsidian/app.json
+# - .obsidian/appearance.json
+# - .obsidian/core-plugins.json
+# - .obsidian/graph.json
+# - .obsidian/community-plugins.json (si lo hay)
+# - Todos los .md del vault
