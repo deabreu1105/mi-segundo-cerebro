@@ -9,7 +9,7 @@
 ## 🎯 Navegación Rápida
 
 - [[HOME|🏠 Inicio]] — Punto de entrada del vault
-- [[AGENTS|⚙️ Manual del Agente]] — Cómo funciona este sistema
+- [[AGENTS|🗺️ Root Agent]] — Protocolo del agente LLM
 - [[log|📋 Log Cronológico]] — Historia de todas las operaciones
 - **Graph View** (Ctrl+G en Obsidian) — Ver conexiones visuales
 
@@ -82,9 +82,11 @@
 ## ⚙️ Instrucciones de Uso
 
 ### Para el Agente LLM:
-1. **Antes de cada query:** Lee este índice para identificar páginas relevantes
-2. **Después de cada ingest:** Actualiza las secciones correspondientes
-3. **Mantén el orden:** Cronológico inverso (más reciente primero) para fuentes, alfabético para entidades/conceptos
+1. **Al arrancar:** Ejecuta `./init.sh --check` y confirma que todo está OK
+2. **Antes de cada operación:** Lee este índice para identificar páginas relevantes
+3. **Después de cada ingest:** Actualiza las secciones correspondientes
+4. **Workflow detallado:** Lee el subagente correspondiente en `.agents/agents/`
+5. **Mantener orden:** Cronológico inverso (más reciente primero) para fuentes, alfabético para entidades/conceptos
 
 ### Para el Humano:
 - Usa este índice como punto de entrada al wiki

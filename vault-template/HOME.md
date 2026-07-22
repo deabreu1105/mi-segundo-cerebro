@@ -13,7 +13,7 @@
 |---------|-------------|
 | [[index\|📚 Índice completo]] | Catálogo de todo el wiki |
 | [[log\|📋 Log de operaciones]] | Historia cronológica |
-| [[AGENTS\|⚙️ Manual del agente]] | Cómo funciona el sistema |
+| [[AGENTS\|🗺️ Root Agent]] | Protocolo del agente LLM |
 
 ---
 
@@ -22,10 +22,18 @@
 ```
 vault/
 │
+├── init.sh            ⚙️  Inicialización y verificación del vault
 ├── HOME.md            👋 Estás aquí
-├── AGENTS.md          ⚙️ Manual completo del agente
+├── AGENTS.md          🗺️  Root Agent — punto de entrada del LLM
 ├── index.md           📚 Índice navegable del wiki
 ├── log.md             📋 Registro cronológico
+│
+├── .agents/           🤖 Subagentes especializados
+│   ├── agents/
+│   │   ├── ingest.md  📥 Workflow de INGEST
+│   │   ├── query.md   💬 Workflow de QUERY
+│   │   └── lint.md    🔍 Workflow de LINT
+│   └── settings.json
 │
 ├── raw/               📥 Tus fuentes originales (INMUTABLES)
 │   ├── assets/        🖼️  Imágenes y multimedia

@@ -14,22 +14,27 @@ cp -r vault-template mi-tema-vault
 cd mi-tema-vault
 ```
 
-### 2. Personalizar placeholders
-
-Reemplaza en `AGENTS.md` y `HOME.md`:
-- `{{NOMBRE_USUARIO}}` → tu nombre
-- `{{TEMA_VAULT}}` → el tema (ej: "Filosofía Estoica", "Machine Learning", "Historia Romana")
-- `{{FECHA_CREACION}}` → la fecha de hoy (YYYY-MM-DD)
+### 2. Inicializar el vault con `init.sh`
 
 ```bash
-# Reemplazo rápido con sed (cambia los valores)
-TEMA="Mi Tema"
-NOMBRE="Mi Nombre"
-FECHA=$(date +%Y-%m-%d)
+# Dale permisos de ejecución (solo la primera vez)
+chmod +x init.sh
 
-sed -i "s/{{TEMA_VAULT}}/$TEMA/g" AGENTS.md HOME.md index.md log.md
-sed -i "s/{{NOMBRE_USUARIO}}/$NOMBRE/g" AGENTS.md HOME.md
-sed -i "s/{{FECHA_CREACION}}/$FECHA/g" AGENTS.md HOME.md log.md
+# Ejecútalo — te pedirá tu nombre y el tema del vault
+./init.sh
+```
+
+El script detecta automáticamente si el vault está sin inicializar, te pide los datos
+interactivamente y reemplaza todos los placeholders. También crea las carpetas que falten.
+
+**Modo no-interactivo** (para scripting o automatización):
+```bash
+./init.sh -n "Tu Nombre" -t "Tema del Vault"
+```
+
+**Verificar integridad** en cualquier momento:
+```bash
+./init.sh --check
 ```
 
 ### 3. Abrir en Obsidian
@@ -48,18 +53,27 @@ git commit -m "init: {{TEMA_VAULT}} vault"
 ### 5. Primera sesión con el agente LLM
 
 1. Añade un archivo a `raw/` (artículo, PDF convertido, notas, etc.)
-2. Abre Claude/GPT con el contexto de `AGENTS.md`
+2. Abre tu agente LLM con el contexto del vault:
+   - Dale acceso a los archivos del vault
+   - El agente leerá `AGENTS.md` (root) → luego `.agents/agents/ingest.md` (workflow detallado)
 3. Dile: `"Procesa [nombre del archivo]"`
 
 ## Estructura del Template
 
 ```
 vault-template/
+├── init.sh                 ⚙️  Script de inicialización y verificación
+│
 ├── .obsidian/              Configuración de Obsidian
-│   ├── app.json
-│   ├── appearance.json
 │   ├── core-plugins.json   Plugins activos
 │   └── graph.json          Grupos de color por sección
+│
+├── .agents/                Sistema de subagentes (carpeta oculta)
+│   ├── agents/
+│   │   ├── ingest.md       Workflow completo de INGEST
+│   │   ├── query.md        Workflow completo de QUERY
+│   │   └── lint.md         Workflow completo de LINT
+│   └── settings.json       Registro de subagentes y permisos
 │
 ├── _templates/             Plantillas para nuevas páginas
 │   ├── concept.md
@@ -67,12 +81,12 @@ vault-template/
 │   ├── source.md
 │   └── query.md
 │
-├── raw/                    Fuentes originales (inmutables)
-│   ├── assets/
-│   ├── books/
-│   ├── journal/
+├── raw/                    Fuentes originales (INMUTABLES)
+│   ├── assets/             Imágenes y multimedia
+│   ├── books/              Capítulos de libros
+│   ├── journal/            Entradas de diario (YYYY-MM-DD.md)
 │   ├── papers/             Papers académicos y PDFs convertidos a .md
-│   └── web/
+│   └── web/                Artículos web clipeados
 │
 ├── wiki/                   Base de conocimiento (LLM la mantiene)
 │   ├── concepts/
@@ -80,8 +94,8 @@ vault-template/
 │   ├── queries/
 │   └── sources/
 │
-├── AGENTS.md               Manual del agente LLM
-├── HOME.md                 Punto de entrada del vault
+├── AGENTS.md               🗺️  Root agent — punto de entrada del LLM
+├── HOME.md                 Punto de entrada del vault (Obsidian)
 ├── index.md                Índice navegable
 ├── log.md                  Log cronológico de operaciones
 └── README.md               Este archivo

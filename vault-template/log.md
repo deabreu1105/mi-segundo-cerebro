@@ -8,20 +8,26 @@
 ## [{{FECHA_CREACION}}] init | Inicialización del Sistema
 
 **Tipo:** Configuración inicial  
-**Agente:** LLM Wiki Agent v2.0  
+**Agente:** LLM Wiki Agent v3.0  
 **Vault:** {{TEMA_VAULT}}
 
 ### Acciones realizadas:
 1. ✅ Creada estructura de carpetas:
-   - `raw/` — Para fuentes originales (con subcarpetas: assets, books, journal, web, **papers**)
+   - `raw/` — Para fuentes originales (con subcarpetas: assets, books, journal, web, papers)
    - `wiki/entities/` — Para páginas de entidades
    - `wiki/concepts/` — Para páginas de conceptos
    - `wiki/sources/` — Para summaries de fuentes
    - `wiki/queries/` — Para respuestas archivadas
    - `_templates/` — Para plantillas reutilizables
+   - `.agents/agents/` — Para subagentes especializados
 
 2. ✅ Creados archivos del sistema:
-   - `AGENTS.md` — Schema completo del agente (v2.0)
+   - `init.sh` — Script de inicialización y verificación del vault
+   - `AGENTS.md` — Root agent (punto de entrada del LLM, v3.0)
+   - `.agents/agents/ingest.md` — Subagente INGEST
+   - `.agents/agents/query.md` — Subagente QUERY
+   - `.agents/agents/lint.md` — Subagente LINT
+   - `.agents/settings.json` — Configuración del sistema de agentes
    - `HOME.md` — Punto de entrada principal
    - `index.md` — Índice inicial vacío
    - `log.md` — Este archivo
@@ -33,7 +39,7 @@
 - **Sistema:** ✅ Operacional y listo
 
 ### Próximos pasos:
-- Editar placeholders `{{NOMBRE_USUARIO}}`, `{{TEMA_VAULT}}`, `{{FECHA_CREACION}}` en AGENTS.md y HOME.md
+- Ejecutar `chmod +x init.sh && ./init.sh` para personalizar el vault
 - Añadir primera fuente a `raw/`
 - Ejecutar workflow INGEST
 
@@ -80,3 +86,25 @@ grep "^## \[2026-07-21\]" log.md
 - Convertir PDF → `.md` con `pandoc` o `pdftotext` antes de depositar
 - Nombre: `YYYY-MM-DD-titulo-del-paper.md`
 - PDF original opcional en `raw/assets/` como referencia
+
+---
+
+## [2026-07-22] config | Arquitectura multi-agente v3.0
+
+**Tipo:** Rediseño de arquitectura  
+**Agente:** LLM Wiki Agent v3.0  
+
+### Acciones realizadas:
+1. ✅ Creado `init.sh` — Script interactivo de inicialización (setup + check modes)
+2. ✅ `AGENTS.md` convertido en root agent ligero (~80 líneas) — era monolítico de 450 líneas
+3. ✅ Creados subagentes especializados en `.agents/agents/`:
+   - `ingest.md` — Workflow completo INGEST con templates de páginas
+   - `query.md` — Workflow de consulta y decisión de archivado
+   - `lint.md` — Health-check de 7 puntos con plantilla de reporte
+4. ✅ Creado `.agents/settings.json` — Registro de subagentes y permisos
+5. ✅ Actualizados `HOME.md`, `README.md`, `log.md` — arquitectura v3.0
+
+### Beneficios:
+- El agente LLM solo lee lo que necesita (divulgación progresiva)
+- Setup del vault automatizado con un solo comando: `./init.sh`
+- Workflows detallados aislados por operación
