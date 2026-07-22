@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"27ee1a96de30a928","type":"text","text":"Mi nota  2","x":430,"y":-320,"width":250,"height":60,"color":"1"},
+		{"id":"65b73b76c4283b28","type":"file","file":"logo-patornes.png","x":-140,"y":-182,"width":180,"height":192},
+		{"id":"ad432da65635574e","type":"text","text":"Mi nota\nblabla bla","x":430,"y":10,"width":250,"height":60,"color":"4"},
+		{"id":"24824f098453b070","type":"file","file":"001-Tareas/Tarea 1.md","x":-680,"y":-430,"width":280,"height":340},
+		{"id":"a2181c39ceffa0a3","type":"file","file":"001-Tareas/Tarea 2.md","x":-680,"y":70,"width":280,"height":320},
+		{"id":"ba05ecec2f368c5c","type":"file","file":"Excalidraw/Esquema.excalidraw.md","x":100,"y":-240,"width":310,"height":210}
+	],
+	"edges":[
+		{"id":"38a1a6e2d5044563","fromNode":"24824f098453b070","fromSide":"right","toNode":"65b73b76c4283b28","toSide":"left"},
+		{"id":"0ca5bdb0cd159919","fromNode":"65b73b76c4283b28","fromSide":"right","toNode":"a2181c39ceffa0a3","toSide":"right"},
+		{"id":"447c6d2e04d4b37b","fromNode":"27ee1a96de30a928","fromSide":"left","toNode":"24824f098453b070","toSide":"right"},
+		{"id":"9fb85543af86357b","fromNode":"ad432da65635574e","fromSide":"bottom","toNode":"a2181c39ceffa0a3","toSide":"right"},
+		{"id":"d3442997436d198b","fromNode":"a2181c39ceffa0a3","fromSide":"right","toNode":"ad432da65635574e","toSide":"bottom"}
+	]
+}

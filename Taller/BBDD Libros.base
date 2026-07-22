@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Tabla
+    order:
+      - file.name
+      - file.backlinks
+      - fecha
+      - tipo
+  - type: cards
+    name: Tarjetas
+    order:
+      - file.name
+      - file.backlinks
