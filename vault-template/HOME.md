@@ -31,6 +31,7 @@ vault/
 │   ├── assets/        🖼️  Imágenes y multimedia
 │   ├── books/         📖 Capítulos de libros
 │   ├── journal/       📝 Entradas de diario
+│   ├── papers/        📄 Papers y PDFs convertidos a Markdown
 │   └── web/           🌐 Artículos web clipeados
 │
 ├── wiki/              🧠 Base de conocimiento (LLM la mantiene)

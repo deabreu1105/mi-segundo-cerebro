@@ -20,11 +20,14 @@ Eres el agente mantenedor del wiki de **{{NOMBRE_USUARIO}}** sobre **{{TEMA_VAUL
 - **Propósito:** Fuentes originales inmutables
 - **Contenido:** Artículos, papers, imágenes, datos, transcripciones, entradas de diario
 - **Regla clave:** NUNCA modifiques archivos en esta carpeta. Son tu fuente de verdad.
-- **Subcarpetas sugeridas:**
+- **Subcarpetas:**
   - `raw/assets/` - Imágenes y archivos multimedia descargados localmente
   - `raw/books/` - Capítulos de libros (un archivo por capítulo)
   - `raw/journal/` - Entradas de diario (YYYY-MM-DD.md)
   - `raw/web/` - Artículos capturados desde la web
+  - `raw/papers/` - Papers académicos y PDFs convertidos a Markdown
+
+> **Nota sobre PDFs:** Los agentes LLM no leen binarios. Convierte los PDFs a `.md` antes de depositarlos en `raw/`. Guarda el PDF original fuera del vault o en `raw/assets/` solo como referencia.
 
 ### Capa 2: Wiki (`wiki/`)
 - **Propósito:** Base de conocimiento mantenida completamente por ti
@@ -313,6 +316,23 @@ grep "^## \[.*\] ingest" log.md   # Solo ingests
 
 ## Flujos de Trabajo Especiales
 
+### 📄 Procesamiento de PDFs
+1. **Convertir el PDF a Markdown** antes de depositarlo:
+   ```bash
+   # Opción A — pandoc (preserva estructura)
+   pandoc mi-paper.pdf -o raw/papers/mi-paper.md
+
+   # Opción B — pdftotext (más simple)
+   pdftotext mi-paper.pdf - > raw/papers/mi-paper.md
+   ```
+2. Depositar el `.md` resultante en `raw/papers/`
+3. (Opcional) Guardar el PDF original en `raw/assets/` solo como referencia
+4. Decirle al agente: `"Procesa raw/papers/mi-paper.md"`
+5. El agente ejecuta el workflow INGEST normal
+
+> **Convención de nombres:** `YYYY-MM-DD-titulo-del-paper.md`  
+> **Regla:** Una vez depositado, NO modificar el archivo.
+
 ### Lectura de Libro
 1. Cada capítulo → nueva fuente en `raw/books/titulo-libro/capitulo-N.md`
 2. Crear páginas para: personajes, lugares, temas, plot threads
@@ -332,7 +352,7 @@ grep "^## \[.*\] ingest" log.md   # Solo ingests
 4. Privacy-first: el wiki nunca sale de tu máquina
 
 ### Research Académico
-1. Papers en `raw/papers/`
+1. Papers convertidos a Markdown → `raw/papers/`
 2. Crear páginas de autores en `wiki/entities/`
 3. Comparar metodologías en `wiki/concepts/`
 4. Mantener `wiki/queries/` con síntesis de debates del campo

@@ -71,6 +71,7 @@ vault-template/
 │   ├── assets/
 │   ├── books/
 │   ├── journal/
+│   ├── papers/             Papers académicos y PDFs convertidos a .md
 │   └── web/
 │
 ├── wiki/                   Base de conocimiento (LLM la mantiene)
