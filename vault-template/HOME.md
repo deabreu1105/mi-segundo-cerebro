@@ -14,6 +14,21 @@
 | [[index\|📚 Índice completo]] | Catálogo de todo el wiki |
 | [[log\|📋 Log de operaciones]] | Historia cronológica |
 | [[AGENTS\|🗺️ Root Agent]] | Protocolo del agente LLM |
+| [[PROMPTS\|🎯 Cheatsheet de prompts]] | Referencia rápida de todos los comandos |
+
+---
+
+## 📖 ¿Qué es el LLM Wiki Pattern?
+
+Este vault se basa en el **LLM Wiki Pattern** concebido por **Andrej Karpathy** (2024).
+
+A diferencia del RAG tradicional (donde la IA lee tus documentos desde cero en cada pregunta), este sistema **compila el conocimiento una sola vez y lo mantiene acumulativo y actualizado en un wiki Markdown**.
+
+- **Fuentes (Raw):** Se guardan inmutables en `raw/`. Son la fuente de verdad inalterable.
+- **Base de Conocimiento (Wiki):** El agente procesa cada fuente nueva y actualiza incrementalmente las páginas de conceptos (`wiki/concepts/`), entidades (`wiki/entities/`) y summaries (`wiki/sources/`).
+- **Bookkeeping Automatizado:** El agente se encarga de enlazar notas bidireccionalmente, actualizar índices (`index.md`), llevar el registro (`log.md`) y señalar contradicciones.
+
+📄 Puedes leer la propuesta técnica original en: `raw/2026-07-21-llm-wiki-pattern-karpathy.md`
 
 ---
 
@@ -25,6 +40,7 @@ vault/
 ├── init.sh            ⚙️  Inicialización y verificación del vault
 ├── HOME.md            👋 Estás aquí
 ├── AGENTS.md          🗺️  Root Agent — punto de entrada del LLM
+├── PROMPTS.md         🎯 Cheatsheet de prompts para el agente
 ├── index.md           📚 Índice navegable del wiki
 ├── log.md             📋 Registro cronológico
 │
@@ -48,7 +64,7 @@ vault/
 │   ├── concepts/      💡 Ideas, teorías, metodologías
 │   └── queries/       🔍 Respuestas valiosas archivadas
 │
-└── _templates/        📋 Plantillas para nuevas páginas
+└── .templates/        📋 Plantillas para nuevas páginas
     ├── concept.md
     ├── entity.md
     ├── source.md
@@ -120,7 +136,7 @@ El agente: busca contradicciones → páginas huérfanas → cross-refs faltante
 - ✅ **Backlinks** — Ver referencias inversas
 - ✅ **Quick switcher** — Ctrl+O para buscar rápido
 - ✅ **Properties** — Vista de frontmatter YAML
-- ✅ **Templates** — Para usar las plantillas en `_templates/`
+- ✅ **Templates** — Para usar las plantillas en `.templates/`
 
 ### Plugins Community (recomendados)
 - **Dataview** — Queries sobre frontmatter YAML

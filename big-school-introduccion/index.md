@@ -1,8 +1,8 @@
 # 📚 Índice del Wiki — Big school introducción
 
-> **Última actualización:** 2026-07-22  
-> **Total de páginas:** 27  
-> **Total de fuentes procesadas:** 10
+> **Última actualización:** 2026-07-27  
+> **Total de páginas:** 28  
+> **Total de fuentes procesadas:** 11
 
 ---
 
@@ -17,6 +17,7 @@
 
 ## 📑 Fuentes Procesadas (`wiki/sources/`)
 
+- [[2026-07-21-llm-wiki-pattern-karpathy]] — Patrón arquitectónico fundacional para bases de conocimiento acumulativas con LLMs (Andrej Karpathy).
 - [[2026-07-22-introduccion-y-fundamentos-de-desarrollo]] — Nuevo paradigma del mercado: síntesis y arquitectura sobre memorización de sintaxis. Tutorial Hell, fundamentos inmutables.
 - [[2026-07-22-documentacion-y-gestion-del-conocimiento]] — Second Brain, Método Cornell, Bug Journal, jerarquía RTFM, ADRs.
 - [[2026-07-22-filosofia-del-desarrollador-aumentado]] — Metamodelo Centauro: sinergia humano-IA. El desarrollador como arquitecto supervisor.
@@ -78,7 +79,7 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Fuentes totales | 10 |
+| Fuentes totales | 11 |
 | Entidades (herramientas) | 5 |
 | Entidades (organizaciones) | 1 |
 | Entidades (otras) | 1 |
@@ -87,7 +88,7 @@
 | Queries archivadas | 1 |
 | Páginas huérfanas | 0 |
 | Contradicciones marcadas | 1 |
-| Última operación | 2026-07-22 — lint (health check) |
+| Última operación | 2026-07-27 — ingest (LLM Wiki Pattern Karpathy) |
 
 ---
 

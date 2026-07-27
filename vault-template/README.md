@@ -75,7 +75,7 @@ vault-template/
 │   │   └── lint.md         Workflow completo de LINT
 │   └── settings.json       Registro de subagentes y permisos
 │
-├── _templates/             Plantillas para nuevas páginas
+├── .templates/             Plantillas para nuevas páginas
 │   ├── concept.md
 │   ├── entity.md
 │   ├── source.md
@@ -95,6 +95,7 @@ vault-template/
 │   └── sources/
 │
 ├── AGENTS.md               🗺️  Root agent — punto de entrada del LLM
+├── PROMPTS.md              🎯  Cheatsheet de prompts para el humano
 ├── HOME.md                 Punto de entrada del vault (Obsidian)
 ├── index.md                Índice navegable
 ├── log.md                  Log cronológico de operaciones

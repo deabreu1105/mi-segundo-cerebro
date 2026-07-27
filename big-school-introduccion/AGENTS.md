@@ -6,6 +6,22 @@
 
 ---
 
+## 0. Fundamento — LLM Wiki Pattern (Andrej Karpathy)
+
+Este vault se rige strictly por el **LLM Wiki Pattern** propuesto por Andrej Karpathy (2024).  
+Documento original de referencia: `raw/2026-07-21-llm-wiki-pattern-karpathy.md`  
+Resumen wiki procesado: `wiki/sources/2026-07-21-llm-wiki-pattern-karpathy.md`
+
+### Principios Fundamentales
+1. **Compilar una vez, acumular siempre:** A diferencia del RAG tradicional que re-descubre conocimiento en cada query, el LLM mantiene un wiki persistente en Markdown que se enriquece incrementalmente.
+2. **Tres Capas Claras:**
+   - `raw/` — Fuentes originales inmutables (fuente de verdad). El LLM lee pero NUNCA modifica.
+   - `wiki/` — Conocimiento acumulado y sintetizado en Markdown. El LLM lo mantiene al 100%.
+   - **Schema** (`AGENTS.md` + `.agents/`) — El mapa y protocolo de reglas acordado.
+3. **El LLM como Mantenedor (Bookkeeping):** El rol principal del LLM es eliminar la carga de mantenimiento (enlaces bidireccionales, índices, registro de cambios y detección de contradicciones).
+
+---
+
 ## 1. Antes de empezar (obligatorio)
 
 1. **Verifica el vault:** ejecuta `./init.sh --check` y confirma que termina sin errores.
@@ -23,6 +39,7 @@
 | El humano dice... | Qué haces |
 |-------------------|-----------|
 | `"Procesa [archivo en raw/]"` | Lees `.agents/agents/ingest.md` y ejecutas ese workflow |
+| `"Procesa todo lo pendiente en raw/"` | Escaneas todas las subcarpetas de `raw/`, identificas archivos no procesados y ejecutas `.agents/agents/ingest.md` para cada uno |
 | `"¿Qué sabemos sobre X?"` o cualquier pregunta | Lees `.agents/agents/query.md` y ejecutas ese workflow |
 | `"Lint el wiki"` o `"Health check"` | Lees `.agents/agents/lint.md` y ejecutas ese workflow |
 
@@ -36,6 +53,7 @@
 | `index.md` | Catálogo navegable de todo el wiki | Al inicio de cada sesión |
 | `log.md` | Registro cronológico append-only | Para ver el estado previo |
 | `HOME.md` | Punto de entrada para el humano | Si necesitas contexto general |
+| `PROMPTS.md` | Cheatsheet de prompts para el humano | Referencia rápida de comandos |
 | `raw/` | Fuentes originales **inmutables** | Para leer fuentes (INGEST) |
 | `raw/assets/` | Imágenes y multimedia | Contexto visual de fuentes |
 | `raw/books/` | Capítulos de libros convertidos | INGEST de libros |
@@ -46,7 +64,7 @@
 | `wiki/entities/` | Personas, lugares, organizaciones | QUERY / LINT |
 | `wiki/concepts/` | Ideas, teorías, metodologías | QUERY / LINT |
 | `wiki/queries/` | Respuestas valiosas archivadas | QUERY |
-| `_templates/` | Plantillas para nuevas páginas | Referencia al crear páginas |
+| `.templates/` | Plantillas para nuevas páginas | Referencia al crear páginas |
 | `.agents/agents/ingest.md` | Workflow completo de INGEST | Antes de procesar una fuente |
 | `.agents/agents/query.md` | Workflow completo de QUERY | Antes de responder preguntas |
 | `.agents/agents/lint.md` | Workflow completo de LINT | Antes de hacer health-check |

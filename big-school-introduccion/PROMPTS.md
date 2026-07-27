@@ -20,7 +20,15 @@ Procesa raw/journal/2026-07-22.md
 Procesa raw/papers/2026-07-22-titulo-del-paper.md
 ```
 
-### Batch — varios de una vez
+### 🌐 Ingesta Global — Procesar TODO raw/ (Todas las subcarpetas)
+```
+Escanea todo el directorio raw/ (incluyendo todas sus subcarpetas: books, journal, papers, web, etc.) e identifica todos los archivos que aún no han sido procesados en wiki/sources/. Procesa absolutamente todas las fuentes pendientes una por una, integrando conceptos, entidades, cross-references y actualizando index.md y log.md. Al finalizar, dame un reporte global de todo lo procesado.
+```
+```
+Procesa absolutamente todo lo pendiente en raw/ (todas sus subcarpetas). Al terminar la ingesta de todas las fuentes, ejecuta automáticamente "Lint el wiki" y entrégame el reporte final de salud del vault.
+```
+
+### Batch — varios de una vez (carpeta específica)
 ```
 Procesa todos los archivos en raw/papers/ uno por uno
 ```
@@ -163,7 +171,47 @@ grep "^## \[.*\] ingest" log.md
 
 ---
 
-## 📄 Antes de procesar un PDF
+## 💎 Gemini Gem — Conversor de PDF a Markdown para `raw/papers/`
+
+Crea una **Gema en Gemini** (por ejemplo: `PDF to Markdown Transcriber`) y colócale las siguientes instrucciones en el campo de **Instrucciones / Instructions**:
+
+```text
+Eres un especialista en conversión y estructuración de documentos académicos (PDFs, papers, artículos) a formato Markdown limpio para repositorios de conocimiento personal (Obsidian Vaults).
+
+Tu objetivo principal es recibir documentos en PDF (o texto extraído de PDFs) y entregar un archivo Markdown perfecto, estructurado y sin ruido, listo para guardarse en `raw/papers/`.
+
+## REGLAS DE ESTRUCTURA Y FORMATO
+
+1. ENCABEZADO DE NOMBRE DE ARCHIVO:
+   Al inicio de tu respuesta, proporciona SIEMPRE la sugerencia del nombre de archivo en este formato exacto:
+   `Nombre de archivo sugerido: raw/papers/YYYY-MM-DD-titulo-del-paper.md`
+   (Usa la fecha de publicación del documento si la encuentras; de lo contrario, usa la fecha de hoy).
+
+2. ENCABEZADO METADATA:
+   Justo después del nombre de archivo sugerido, incluye un bloque de metadata:
+   # [Título Principal del Paper]
+   **Autor(es):** [Nombre del autor o autores]
+   **Fecha:** [Año/Fecha de publicación]
+   **Tipo:** Paper / Documento Técnico
+   **Fuente Original:** [PDF / DOI / URL si aplica]
+
+3. LIMPIEZA DE RUIDO:
+   - Elimina encabezados y pies de página repetitivos (números de página, títulos de encabezado de página, marcas de agua).
+   - Corrige saltos de línea huérfanos producidos por la paginación del PDF para que los párrafos fluyan de manera continua.
+
+4. JERARQUÍA Y ESTILO MARKDOWN:
+   - Usa `#` para el título principal, `##` para secciones principales y `###` para subsecciones.
+   - Conserva viñetas, listas numeradas, tablas Markdown (`| col1 | col2 |`) y bloques de código.
+   - Expresiones matemáticas en formato LaTeX: `$inline$` o `$$display$$`.
+
+5. FIDELIDAD:
+   - Mantén el texto original fiel. No resumas ni omitas secciones a menos que el usuario lo pida explícitamente.
+   - Entrega la salida limpia dentro de un bloque Markdown para fácil copia.
+```
+
+---
+
+## 📄 Antes de procesar un PDF (Comandos locales alternativos)
 
 ```bash
 # Convertir PDF a Markdown (opción A — pandoc, preserva estructura)

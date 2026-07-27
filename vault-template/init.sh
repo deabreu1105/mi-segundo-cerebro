@@ -65,7 +65,7 @@ header "1. Detectando modo"
 
 HAS_PLACEHOLDERS=false
 if grep -rq "{{NOMBRE_USUARIO}}\|{{TEMA_VAULT}}\|{{FECHA_CREACION}}" \
-    AGENTS.md HOME.md index.md log.md 2>/dev/null; then
+    AGENTS.md HOME.md PROMPTS.md index.md log.md 2>/dev/null; then
   HAS_PLACEHOLDERS=true
 fi
 
@@ -104,7 +104,7 @@ if $HAS_PLACEHOLDERS && ! $ONLY_CHECK; then
   echo ""
 
   # Archivos que contienen placeholders
-  TARGETS=(AGENTS.md HOME.md index.md log.md)
+  TARGETS=(AGENTS.md HOME.md PROMPTS.md index.md log.md)
 
   for f in "${TARGETS[@]}"; do
     if [[ -f "$f" ]]; then
@@ -147,7 +147,7 @@ REQUIRED_DIRS=(
   "wiki/concepts"
   "wiki/sources"
   "wiki/queries"
-  "_templates"
+  ".templates"
 )
 
 for dir in "${REQUIRED_DIRS[@]}"; do
@@ -170,13 +170,14 @@ header "4. Verificando archivos base del sistema"
 REQUIRED_FILES=(
   "AGENTS.md"
   "HOME.md"
+  "PROMPTS.md"
   "index.md"
   "log.md"
   "README.md"
-  "_templates/concept.md"
-  "_templates/entity.md"
-  "_templates/source.md"
-  "_templates/query.md"
+  ".templates/concept.md"
+  ".templates/entity.md"
+  ".templates/source.md"
+  ".templates/query.md"
 )
 
 for f in "${REQUIRED_FILES[@]}"; do
@@ -191,7 +192,7 @@ done
 # ── CHECK: Verificar que no quedan placeholders ─────────────────────────────
 header "5. Verificando placeholders"
 
-PLACEHOLDER_FILES=(AGENTS.md HOME.md index.md log.md)
+PLACEHOLDER_FILES=(AGENTS.md HOME.md PROMPTS.md index.md log.md)
 FOUND_PLACEHOLDERS=false
 
 for f in "${PLACEHOLDER_FILES[@]}"; do

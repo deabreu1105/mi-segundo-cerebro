@@ -139,7 +139,39 @@ grep "^## \[2026-07-21\]" log.md
 - `wiki/queries/2026-07-22-notebooklm-vs-obsidian.md`
 
 ### Insight clave:
-Son complementarias, no competidoras. NotebookLM **extrae** conocimiento de documentos existentes vía RAG; Obsidian **integra** ese conocimiento en una red personal acumulativa. El flujo ideal: docs brutos → NotebookLM → insights → Obsidian.
+---
+
+## [2026-07-27] ingest | LLM Wiki Pattern — Andrej Karpathy
+
+**Archivo fuente:** `raw/2026-07-21-llm-wiki-pattern-karpathy.md`
+
+### Páginas creadas:
+- `wiki/sources/2026-07-21-llm-wiki-pattern-karpathy.md`
+
+### Archivos actualizados:
+- `AGENTS.md` — Añadida sección `## 0. Fundamento` explicitando el patrón Karpathy
+- `HOME.md` — Añadida sección `## 📖 ¿Qué es el LLM Wiki Pattern?`
+- `index.md` — Añadida fuente procesada y contadores actualizados (11 fuentes)
+- `log.md` — Este registro
+
+### Insights destacados:
+- Se establece oficialmente el **LLM Wiki Pattern de Karpathy** como el fundamento explícito del vault.
+- El RAG tradicional re-descubre conocimiento en cada query; el wiki persistente acumula y compila el conocimiento de forma perdurable.
+
+---
+
+## [2026-07-27] config | Migración de plantillas a .templates/
+
+**Tipo:** Ajuste de interfaz e integración Obsidian  
+**Agente:** LLM Wiki Agent v3.0  
+
+### Acciones realizadas:
+1. ✅ Renombrada/creada carpeta `.templates/` (oculta para Obsidian en explorador, graph view y Quick Switcher).
+2. ✅ Configurado `.obsidian/templates.json` para asociar `.templates/` al plugin nativo *Templates*.
+3. ✅ Actualizadas todas las referencias en `AGENTS.md`, `HOME.md`, `README.md` e `init.sh`.
+
+### Beneficio:
+- Evita saturar la vista gráfica (Graph View), resultados de búsqueda y el árbol visual de Obsidian con plantillas de sistema.
 
 
 ## [2026-07-22] config | Añadida carpeta raw/papers/ y soporte para PDFs

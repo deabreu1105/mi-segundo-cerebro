@@ -75,7 +75,7 @@ vault-template/
 │   │   └── lint.md         Workflow completo de LINT
 │   └── settings.json       Registro de subagentes y permisos
 │
-├── _templates/             Plantillas para nuevas páginas
+├── .templates/             Plantillas para nuevas páginas
 │   ├── concept.md
 │   ├── entity.md
 │   ├── source.md

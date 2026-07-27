@@ -147,7 +147,7 @@ REQUIRED_DIRS=(
   "wiki/concepts"
   "wiki/sources"
   "wiki/queries"
-  "_templates"
+  ".templates"
 )
 
 for dir in "${REQUIRED_DIRS[@]}"; do
@@ -170,13 +170,14 @@ header "4. Verificando archivos base del sistema"
 REQUIRED_FILES=(
   "AGENTS.md"
   "HOME.md"
+  "PROMPTS.md"
   "index.md"
   "log.md"
   "README.md"
-  "_templates/concept.md"
-  "_templates/entity.md"
-  "_templates/source.md"
-  "_templates/query.md"
+  ".templates/concept.md"
+  ".templates/entity.md"
+  ".templates/source.md"
+  ".templates/query.md"
 )
 
 for f in "${REQUIRED_FILES[@]}"; do
