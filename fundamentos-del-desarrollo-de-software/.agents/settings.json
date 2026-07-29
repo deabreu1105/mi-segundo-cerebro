@@ -1,0 +1,42 @@
+{
+  "$schema_comment": "Configuración del sistema de agentes del vault Segundo Cerebro.",
+  "version": "1.0",
+  "agents": {
+    "available": [
+      {
+        "name": "ingest",
+        "path": ".agents/agents/ingest.md",
+        "trigger": "El humano dice 'Procesa [archivo]' o indica una nueva fuente en raw/",
+        "description": "Procesa una fuente nueva: crea summary, actualiza entidades/conceptos, cross-refs, index y log."
+      },
+      {
+        "name": "query",
+        "path": ".agents/agents/query.md",
+        "trigger": "El humano hace una pregunta sobre el conocimiento acumulado",
+        "description": "Navega el wiki, sintetiza respuesta, decide si archivar en wiki/queries/."
+      },
+      {
+        "name": "lint",
+        "path": ".agents/agents/lint.md",
+        "trigger": "El humano dice 'Lint el wiki' o 'Health check'",
+        "description": "Detecta contradicciones, huérfanas, gaps, cross-refs faltantes e index desactualizado."
+      }
+    ]
+  },
+  "startup": {
+    "required_check": "./init.sh --check",
+    "description": "Antes de cualquier operación, verifica que init.sh pasa sin errores (vault inicializado, estructura OK)."
+  },
+  "permissions": {
+    "allow": [
+      "Bash(./init.sh)",
+      "Bash(./init.sh --check)",
+      "Bash(grep*)",
+      "Bash(find*)"
+    ],
+    "deny": [
+      "Bash(rm*)",
+      "Bash(mv raw/*)"
+    ]
+  }
+}
