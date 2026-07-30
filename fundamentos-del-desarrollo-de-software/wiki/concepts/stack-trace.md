@@ -1,7 +1,7 @@
 ---
 type: concept
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-07-30
 tags: [debugging, stack-trace, causalidad, diagnostico]
 ---
 
@@ -25,11 +25,13 @@ Un **Stack Trace** (o rastreo de pila) es un informe estructurado que muestra la
 
 ## Sources
 - [[wiki/sources/2026-07-29-metodologias-de-resolucion-de-problemas]] — Guía de herramientas del detective digital por [[brais-moure]] / [[big-school]].
+- [[wiki/sources/2026-07-30-manejo-de-errores-y-excepciones]] — La propagación de excepciones (*call stack bubbling*) es el mismo mecanismo visto desde el momento en que ocurre, no desde su diagnóstico posterior.
 
 ## Related Concepts
 - [[metodologia-de-debugging]]
 - [[analisis-de-logs]]
 - [[breakpoints]]
+- [[manejo-de-errores-y-excepciones]]
 
 ## Open Questions
 - ¿Cómo desofuscar e interpretar eficientemente stack traces en entornos de producción donde el código fuente fue minificado o compilado?

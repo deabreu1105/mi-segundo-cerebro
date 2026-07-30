@@ -1,7 +1,7 @@
 ---
 type: concept
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-07-30
 tags: [arquitectura, liderazgo, estrategia, diseno-de-sistemas]
 ---
 
@@ -12,7 +12,7 @@ La **Mentalidad de Arquitecto** es la postura profesional y estratégica que ado
 
 ## Key Ideas
 - **Transición de Rol:** Evolucionar del rol de programador "colocador de ladrillos digitales" hacia el "director de obra" que valida, audita y estructura la solución.
-- **Prevención de Deuda Técnica:** Prioriza planos lógicos sólidos antes de comprometer recursos de desarrollo o generación mediante IA.
+- **Prevención de Deuda Técnica:** Prioriza planos lógicos sólidos antes de comprometer recursos de desarrollo o generación mediante IA — evita la acumulación de [[deuda-tecnica]].
 - **Visión Holística:** Considera la mantenibilidad, escalabilidad, seguridad y objetivos de negocio por encima de soluciones parches de corto plazo.
 - **Dirección de Automatismos:** Utiliza las herramientas de IA generativa como herramientas de ejecución subordinadas a su estrategia predefinida.
 
@@ -24,11 +24,13 @@ La **Mentalidad de Arquitecto** es la postura profesional y estratégica que ado
 ## Sources
 - [[wiki/sources/2026-07-29-fundamentos-del-pensamiento-computacional]] — Transición de ejecutor a arquitecto.
 - [[wiki/sources/2026-07-29-conclusiones-pensamiento-computacional-y-resolucion-de-problemas]] — El imperativo de la mentalidad de arquitecto.
+- [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — Dominar los fundamentos de programación como ventaja estratégica de mercado.
 
 ## Related Concepts
 - [[pensamiento-computacional]]
 - [[soberania-humana-en-ia]]
 - [[llm-wiki-pattern]]
+- [[deuda-tecnica]]
 
 ## Open Questions
 - ¿Qué metodologías de mentoría aceleran el desarrollo de la mentalidad de arquitecto en ingenieros junior?

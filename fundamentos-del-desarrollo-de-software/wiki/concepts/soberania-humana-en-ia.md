@@ -1,7 +1,7 @@
 ---
 type: concept
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-07-30
 tags: [ia, gobernanza, supervision, etica, pensamiento-critico]
 ---
 
@@ -25,12 +25,15 @@ La **Soberanía Humana en IA** es el principio de gobernanza técnica e intelect
 - [[wiki/sources/2026-07-29-fundamentos-del-pensamiento-computacional]] — La IA como palanca y no como sustituto.
 - [[wiki/sources/2026-07-29-metodologias-de-resolucion-de-problemas]] — Verificación contra alucinaciones.
 - [[wiki/sources/2026-07-29-conclusiones-pensamiento-computacional-y-resolucion-de-problemas]] — Soberanía humana en la interacción con IA.
+- [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-introduccion-y-sintaxis]] — La IA resuelve sintaxis rutinaria; el control semántico sigue siendo intransferible.
+- [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — La IA como combinación de las mismas herramientas mentales que domina el desarrollador.
 
 ## Related Concepts
 - [[mentalidad-de-arquitecto]]
 - [[pensamiento-computacional]]
 - [[llm-wiki-pattern]]
 - [[metodologia-de-debugging]]
+- [[sintaxis-y-semantica]]
 
 ## Open Questions
 - ¿Cómo mitigar la pérdida paulatina de habilidades técnicas de bajo nivel en ingenieros que dependen intensamente de la IA?

@@ -1,8 +1,8 @@
 # 📚 Índice del Wiki — Fundamentos del desarrollo de software
 
 > **Última actualización:** 2026-07-30  
-> **Total de páginas:** 35  
-> **Total de fuentes procesadas:** 9
+> **Total de páginas:** 55  
+> **Total de fuentes procesadas:** 16
 
 ---
 
@@ -29,6 +29,15 @@
 - [[wiki/sources/2026-07-30-control-de-versiones-con-git-y-github|2026-07-30-control-de-versiones-con-git-y-github]] — Control de versiones, estados de Git, Conventional Commits, Gitflow y SSH por Fernando Herrera / Brais Moure
 - [[wiki/sources/2026-07-30-entornos-de-desarrollo-ide|2026-07-30-entornos-de-desarrollo-ide]] — Entornos de desarrollo integrados (VS Code), reducción del context switch y GitHub Copilot por Brais Moure / BIG School
 - [[wiki/sources/2026-07-30-ecosistema-del-desarrollo-de-software-moderno-conclusiones|2026-07-30-ecosistema-del-desarrollo-de-software-moderno-conclusiones]] — La Tríada Estratégica (Terminal, Git e IDE) e IA como acelerador por Brais Moure / BIG School
+
+### Módulo 2: Fundamentos de la Programación
+- [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-introduccion-y-sintaxis|2026-07-30-fundamentos-de-la-programacion-introduccion-y-sintaxis]] — Sintaxis vs. semántica y compilación vs. interpretación por BIG School
+- [[wiki/sources/2026-07-30-variables-tipos-de-datos-y-operadores|2026-07-30-variables-tipos-de-datos-y-operadores]] — Ciclo de vida de variables, tipado estático/dinámico, operadores y scope por BIG School
+- [[wiki/sources/2026-07-30-estructuras-de-control|2026-07-30-estructuras-de-control]] — Condicionales, bucles y control avanzado de flujo (BREAK/CONTINUE/RETURN) por BIG School
+- [[wiki/sources/2026-07-30-estructuras-de-datos|2026-07-30-estructuras-de-datos]] — Arrays, listas, pilas, colas, mapas y sets por BIG School
+- [[wiki/sources/2026-07-30-funciones-y-parametros|2026-07-30-funciones-y-parametros]] — Modularización, DRY, parámetros vs. argumentos y funciones puras por BIG School
+- [[wiki/sources/2026-07-30-manejo-de-errores-y-excepciones|2026-07-30-manejo-de-errores-y-excepciones]] — Taxonomía de errores, TRY/CATCH/FINALLY y excepciones personalizadas por BIG School
+- [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones|2026-07-30-fundamentos-de-la-programacion-conclusiones]] — Síntesis del Módulo 2 bajo el marco del pensamiento computacional por BIG School
 
 ---
 
@@ -75,6 +84,21 @@
 
 ### Teorías / Frameworks
 - [[mentalidad-de-arquitecto]] — Enfoque del profesional que prioriza el diseño sistémico y la sostenibilidad sobre la sintaxis
+- [[deuda-tecnica]] — Coste futuro acumulado de decisiones de diseño tomadas por rapidez o descuido en el presente
+
+### Fundamentos de la Programación
+- [[sintaxis-y-semantica]] — La forma (mandato de la máquina) frente al fondo (mandato del negocio)
+- [[compilacion-e-interpretacion]] — Las dos modalidades de traducción de código fuente a código máquina
+- [[variables-y-tipos-de-datos]] — Ciclo de vida de una variable, tipos primitivos, nomenclatura y operadores
+- [[tipado-estatico-vs-dinamico]] — Cuándo y cómo un lenguaje fija el tipo de una variable
+- [[paso-por-valor-vs-referencia]] — Comportamiento de copia de primitivos frente a objetos/listas
+- [[scope-y-lifetime]] — Ámbito de visibilidad y tiempo de vida de una variable
+- [[condicionales]] — IF/ELSE, ELSE IF, anidamiento y SWITCH
+- [[bucles]] — WHILE, DO-WHILE, FOR y FOREACH
+- [[estructuras-de-datos]] — Arrays, listas, pilas, colas, mapas y sets
+- [[funciones-y-parametros]] — Modularización, DRY, parámetro vs. argumento
+- [[funciones-puras-y-efectos-secundarios]] — Determinismo vs. modificación de estado externo
+- [[manejo-de-errores-y-excepciones]] — Taxonomía de errores, TRY/CATCH/FINALLY, throw y propagación
 
 ---
 
@@ -89,13 +113,13 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Fuentes totales | 9 |
+| Fuentes totales | 16 |
 | Entidades (personas) | 4 |
 | Entidades (orgs/lugares) | 1 |
-| Conceptos | 19 |
+| Conceptos | 32 |
 | Queries archivadas | 2 |
 | Páginas huérfanas | 0 |
-| Última operación | Ingesta Masiva Módulo 1 (Ecosistema Moderno) & Health Check 🟢 |
+| Última operación | Ingesta Masiva Módulo 2 (Fundamentos de la Programación) 🟢 |
 
 ---
 
@@ -115,6 +139,8 @@
 - [[entornos-de-desarrollo-ide]] — Hub de productividad, reducción de context switch e integración de Copilot
 - [[llm-wiki-pattern]] — Hub de arquitectura de conocimiento y gestión con agentes LLM
 - [[metodologia-de-debugging]] — Hub de técnicas forenses y diagnósticos científicos de código
+- [[funciones-y-parametros]] — Hub de modularización: conecta scope, paso por valor/referencia y funciones puras
+- [[variables-y-tipos-de-datos]] — Hub de la materia prima de datos: tipado, scope y deuda técnica
 
 ---
 
@@ -128,4 +154,4 @@
 
 ---
 
-**🚀 Estado:** Ingesta masiva de todas las fuentes de `raw/` completada exitosamente. Vault 100% Saludable.
+**🚀 Estado:** Ingesta masiva del Módulo 2 (Fundamentos de la Programación) completada. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.

@@ -352,6 +352,50 @@ workflow/skill — misma arquitectura ya aplicada en `vault-template/`.
 ### Reporte archivado:
 - Añadido como segunda sección en `wiki/queries/lint-2026-07-30.md` (mismo día que la ingesta del Módulo 1, no se creó archivo nuevo para evitar duplicar el nombre).
 
+---
+
+## [2026-07-30] ingest | Ingesta Masiva Módulo 2 (Fundamentos de la Programación)
+
+**Tipo:** Ingesta Masiva de Documentos Fuentes
+**Agente:** Subagente INGEST v3.0
+**Fuentes procesadas:** 7 nuevas fuentes en `raw/papers/`
+
+### Páginas creadas en `wiki/sources/`:
+- `wiki/sources/2026-07-30-fundamentos-de-la-programacion-introduccion-y-sintaxis.md`
+- `wiki/sources/2026-07-30-variables-tipos-de-datos-y-operadores.md`
+- `wiki/sources/2026-07-30-estructuras-de-control.md`
+- `wiki/sources/2026-07-30-estructuras-de-datos.md`
+- `wiki/sources/2026-07-30-funciones-y-parametros.md`
+- `wiki/sources/2026-07-30-manejo-de-errores-y-excepciones.md`
+- `wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones.md`
+
+### Páginas de conceptos creadas en `wiki/concepts/`:
+- `wiki/concepts/sintaxis-y-semantica.md`
+- `wiki/concepts/compilacion-e-interpretacion.md`
+- `wiki/concepts/variables-y-tipos-de-datos.md`
+- `wiki/concepts/tipado-estatico-vs-dinamico.md`
+- `wiki/concepts/paso-por-valor-vs-referencia.md`
+- `wiki/concepts/scope-y-lifetime.md`
+- `wiki/concepts/condicionales.md`
+- `wiki/concepts/bucles.md`
+- `wiki/concepts/estructuras-de-datos.md`
+- `wiki/concepts/funciones-y-parametros.md`
+- `wiki/concepts/funciones-puras-y-efectos-secundarios.md`
+- `wiki/concepts/manejo-de-errores-y-excepciones.md`
+- `wiki/concepts/deuda-tecnica.md` (resuelve la sugerencia pendiente del lint anterior: cruzó el umbral de 3+ menciones sin página propia)
+
+### Entidades actualizadas en `wiki/entities/`:
+- `wiki/entities/big-school.md` (7 nuevas fuentes añadidas a "Mentions & Connections")
+
+### Conceptos existentes actualizados (cross-refs bidireccionales):
+- `wiki/concepts/soberania-humana-en-ia.md`, `wiki/concepts/diseno-de-algoritmos.md`, `wiki/concepts/descomposicion.md`, `wiki/concepts/metodologia-de-debugging.md`, `wiki/concepts/stack-trace.md`, `wiki/concepts/mentalidad-de-arquitecto.md`
+
+### Mantenimiento e Índice:
+- `index.md` actualizado: 55 páginas totales, 16 fuentes, 32 conceptos. Nueva sección "Módulo 2: Fundamentos de la Programación" en fuentes y conceptos. Dos hubs nuevos (`funciones-y-parametros`, `variables-y-tipos-de-datos`).
+
+### Insights destacados:
+El eje **paso por valor vs. por referencia** y **scope/lifetime** aparece primero en variables y reaparece idéntico en funciones — quedó modelado como concepto propio compartido entre ambas fuentes en vez de duplicarse. El manejo de errores conecta directamente con la metodología de debugging y el stack trace del Módulo 0 (prevención estructural vs. investigación posterior del mismo fenómeno).
+
 
 
 

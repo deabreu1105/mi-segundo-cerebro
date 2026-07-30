@@ -1,7 +1,7 @@
 ---
 type: concept
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-07-30
 tags: [pilar, algoritmos, flujo, pseudocodigo, diagramas]
 ---
 
@@ -28,11 +28,16 @@ El **Diseño de Algoritmos** es el cuarto pilar del pensamiento computacional y 
 ## Sources
 - [[wiki/sources/2026-07-29-fundamentos-del-pensamiento-computacional]] — Cuarto pilar y elementos gráficos de representación.
 - [[wiki/sources/2026-07-29-ejercicios-practicos-pensamiento-computacional]] — Aplicación en ejercicios prácticos.
+- [[wiki/sources/2026-07-30-estructuras-de-control]] — Condicionales y bucles como implementación concreta del algoritmo.
+- [[wiki/sources/2026-07-30-estructuras-de-datos]] — El esqueleto de datos sobre el que operan los algoritmos.
 
 ## Related Concepts
 - [[pensamiento-computacional]]
 - [[descomposicion]]
 - [[happy-path-vs-edge-cases]]
+- [[condicionales]]
+- [[bucles]]
+- [[estructuras-de-datos]]
 
 ## Open Questions
 - ¿De qué manera la IA puede convertir automáticamente diagramas de flujo Mermaid a pseudocódigo auditado sin introducir sesgos lógicos?

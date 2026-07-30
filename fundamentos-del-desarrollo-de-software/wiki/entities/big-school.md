@@ -1,7 +1,7 @@
 ---
 type: entity
 created: 2026-07-29
-updated: 2026-07-29
+updated: 2026-07-30
 tags: [organizacion, educacion, ia, master]
 ---
 
@@ -25,7 +25,14 @@ Academia tecnológica y plataforma de formación avanzada especializada en progr
   - [[wiki/sources/2026-07-30-control-de-versiones-con-git-y-github]]
   - [[wiki/sources/2026-07-30-entornos-de-desarrollo-ide]]
   - [[wiki/sources/2026-07-30-ecosistema-del-desarrollo-de-software-moderno-conclusiones]]
-- Relacionado con: [[brais-moure]], [[pensamiento-computacional]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]]
+  - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-introduccion-y-sintaxis]]
+  - [[wiki/sources/2026-07-30-variables-tipos-de-datos-y-operadores]]
+  - [[wiki/sources/2026-07-30-estructuras-de-control]]
+  - [[wiki/sources/2026-07-30-estructuras-de-datos]]
+  - [[wiki/sources/2026-07-30-funciones-y-parametros]]
+  - [[wiki/sources/2026-07-30-manejo-de-errores-y-excepciones]]
+  - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]]
+- Relacionado con: [[brais-moure]], [[pensamiento-computacional]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]], [[funciones-y-parametros]], [[manejo-de-errores-y-excepciones]]
 
 ## Notes
-Provee el material académico fuente del Módulo 0 (Fundamentos del Desarrollo de Software).
+Provee el material académico fuente del Módulo 0 (Fundamentos del Desarrollo de Software), incluyendo el Módulo 2 sobre Fundamentos de la Programación (variables, control de flujo, estructuras de datos, funciones y manejo de errores).
