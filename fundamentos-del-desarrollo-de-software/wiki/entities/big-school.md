@@ -21,7 +21,11 @@ Academia tecnológica y plataforma de formación avanzada especializada en progr
   - [[wiki/sources/2026-07-29-metodologias-de-resolucion-de-problemas]]
   - [[wiki/sources/2026-07-29-ejercicios-practicos-pensamiento-computacional]]
   - [[wiki/sources/2026-07-29-conclusiones-pensamiento-computacional-y-resolucion-de-problemas]]
-- Relacionado con: [[brais-moure]], [[pensamiento-computacional]], [[mentalidad-de-arquitecto]]
+  - [[wiki/sources/2026-07-30-terminal-y-linea-de-comandos]]
+  - [[wiki/sources/2026-07-30-control-de-versiones-con-git-y-github]]
+  - [[wiki/sources/2026-07-30-entornos-de-desarrollo-ide]]
+  - [[wiki/sources/2026-07-30-ecosistema-del-desarrollo-de-software-moderno-conclusiones]]
+- Relacionado con: [[brais-moure]], [[pensamiento-computacional]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]]
 
 ## Notes
 Provee el material académico fuente del Módulo 0 (Fundamentos del Desarrollo de Software).

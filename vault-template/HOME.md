@@ -100,6 +100,16 @@ El agente: busca contradicciones → páginas huérfanas → cross-refs faltante
 
 ---
 
+## 🎓 Flujo de Estudio Activo (5 Fases)
+
+1. **🗺️ Mapa y Grafo:** Abre `index.md` o presiona `Ctrl+G` (Graph View) para ubicar los Hubs de Conocimiento.
+2. **📖 Lectura de Conceptos:** Lee notas en `wiki/concepts/` e inspeciona sus fuentes originales en `wiki/sources/`. Aplica la técnica de auto-explicación.
+3. **💻 Práctica Deliberada:** Aplica las ideas en tu entorno de trabajo real, ejercicios o proyectos del tema.
+4. **🧪 Autoevaluación con IA:** Escribe `/grill-me` o pide simulacros socráticos y casos de estudio.
+5. **🔄 Evolución del Wiki:** Registra tus hallazgos o consultas en `wiki/queries/`.
+
+---
+
 ## 📊 Estado Actual
 
 | Métrica | Valor |

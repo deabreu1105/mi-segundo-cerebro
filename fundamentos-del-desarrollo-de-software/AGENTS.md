@@ -11,6 +11,25 @@
 Este vault se rige estrictamente por el **LLM Wiki Pattern** propuesto por Andrej Karpathy (2024).  
 Documento original de referencia: `raw/2026-07-21-llm-wiki-pattern-karpathy.md`
 
+### Multi-agente: este archivo es la única fuente de verdad
+
+Este vault se usa con más de un agente (Antigravity, Claude Code, etc.). Para no mantener
+instrucciones duplicadas:
+
+- **Antigravity** lee `AGENTS.md` (este archivo) de forma nativa.
+- **Claude Code** lee `CLAUDE.md`, que es solo una línea (`@AGENTS.md`) que importa este archivo.
+- Los subagentes (`ingest`, `query`, `lint`) y el skill `grill-me` viven en `.agents/agents/` y
+  `.agents/skills/` — Antigravity los reconoce ahí directamente. `.claude/agents/*.md` y
+  `.claude/commands/*.md` son **symlinks** a esos mismos archivos, no copias.
+- **Nunca edites un archivo dentro de `.claude/`** si es un symlink — edita el original en `.agents/`.
+- **Añadir un agente o skill nuevo es automático:** solo crea el archivo en `.agents/agents/` o
+  `.agents/skills/` — no hace falta symlinkear a mano. `./init.sh --check` detecta el archivo nuevo
+  y crea su symlink en `.claude/` solo; esto corre automáticamente en cada sesión de Claude Code
+  (hook `SessionStart` en `.claude/settings.json`).
+- `.claude/settings.json` es la única pieza que NO se comparte: ahí vive el enforcement real de
+  Claude Code (permisos y hooks). `.agents/settings.json` es el registro equivalente que lee
+  Antigravity/el propio LLM, pero es documental, no se ejecuta.
+
 ### Principios Fundamentales
 1. **Compilar una vez, acumular siempre:** A diferencia del RAG tradicional que re-descubre conocimiento en cada query, el LLM mantiene un wiki persistente en Markdown que se enriquece incrementalmente.
 2. **Tres Capas Claras:**
@@ -49,6 +68,7 @@ Documento original de referencia: `raw/2026-07-21-llm-wiki-pattern-karpathy.md`
 | Archivo / carpeta | Propósito | Cuándo leerlo |
 |-------------------|-----------|---------------|
 | `init.sh` | Setup y verificación del vault | Al arrancar (via `--check`) |
+| `CLAUDE.md` | Puente hacia `AGENTS.md` para Claude Code | Solo lo lee Claude Code; no editar contenido aquí |
 | `index.md` | Catálogo navegable de todo el wiki | Al inicio de cada sesión |
 | `log.md` | Registro cronológico append-only | Para ver el estado previo |
 | `HOME.md` | Punto de entrada para el humano | Si necesitas contexto general |
@@ -67,7 +87,11 @@ Documento original de referencia: `raw/2026-07-21-llm-wiki-pattern-karpathy.md`
 | `.agents/agents/ingest.md` | Workflow completo de INGEST | Antes de procesar una fuente |
 | `.agents/agents/query.md` | Workflow completo de QUERY | Antes de responder preguntas |
 | `.agents/agents/lint.md` | Workflow completo de LINT | Antes de hacer health-check |
-| `.agents/settings.json` | Configuración del sistema de agentes | Referencia técnica |
+| `.agents/skills/grill-me.md` | Examen socrático interactivo (`/grill-me`) | Al recibir el comando |
+| `.agents/settings.json` | Registro de agentes/skills (documental, Antigravity) | Referencia técnica |
+| `.claude/agents/*.md` | Symlinks a `.agents/agents/*.md` | Solo para que Claude Code los detecte |
+| `.claude/commands/grill-me.md` | Symlink a `.agents/skills/grill-me.md` | Solo para que Claude Code lo detecte |
+| `.claude/settings.json` | Enforcement real de Claude Code (permisos + hook `SessionStart`) | Referencia técnica |
 
 ---
 

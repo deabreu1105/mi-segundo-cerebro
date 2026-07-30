@@ -109,6 +109,33 @@ Compara [A] con [B]
 
 ---
 
+## 🎓 ESTUDIO Y AUTOEVALUACIÓN — Flujo de Aprendizaje Activo
+
+### Examen Interactivo (Slash Command)
+```
+/grill-me
+```
+```
+/grill-me sobre [tema o concepto del vault]
+```
+
+### Simulacro socrático de preguntas
+```
+Tómame un examen interactivo de 5 preguntas sobre [tema] basándote en el wiki. Hazme una pregunta a la vez y evalúa mi respuesta antes de pasar a la siguiente.
+```
+
+### Casos de Estudio y Análisis de Escenarios
+```
+Simula un caso de estudio o problema hipotético sobre [tema] para que yo aplique el método de análisis y solución.
+```
+
+### Práctica de Conceptos Complejos
+```
+Plantéame un problema complejo sobre [tema] y guíame paso a paso para desglosarlo y resolverlo.
+```
+
+---
+
 ## 🔍 LINT — Health check del wiki
 
 ### Estándar

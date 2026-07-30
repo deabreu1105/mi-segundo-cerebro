@@ -21,7 +21,11 @@ Ingeniero de software, divulgador tecnológico y educador hispanohablante de ref
   - [[wiki/sources/2026-07-29-metodologias-de-resolucion-de-problemas]]
   - [[wiki/sources/2026-07-29-ejercicios-practicos-pensamiento-computacional]]
   - [[wiki/sources/2026-07-29-conclusiones-pensamiento-computacional-y-resolucion-de-problemas]]
-- Relacionado con: [[big-school]], [[pensamiento-computacional]], [[metodologia-de-debugging]], [[mentalidad-de-arquitecto]], [[soberania-humana-en-ia]]
+  - [[wiki/sources/2026-07-30-terminal-y-linea-de-comandos]]
+  - [[wiki/sources/2026-07-30-control-de-versiones-con-git-y-github]]
+  - [[wiki/sources/2026-07-30-entornos-de-desarrollo-ide]]
+  - [[wiki/sources/2026-07-30-ecosistema-del-desarrollo-de-software-moderno-conclusiones]]
+- Relacionado con: [[big-school]], [[pensamiento-computacional]], [[metodologia-de-debugging]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]]
 
 ## Notes
 Autor de la serie de documentos técnicos del Módulo 0 del Máster de Desarrollo con Inteligencia Artificial.

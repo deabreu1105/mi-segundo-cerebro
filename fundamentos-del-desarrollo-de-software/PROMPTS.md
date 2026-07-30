@@ -109,6 +109,33 @@ Compara [A] con [B]
 
 ---
 
+## 🎓 ESTUDIO Y AUTOEVALUACIÓN — Flujo de Aprendizaje Activo
+
+### Examen Interactivo (Slash Command)
+```
+/grill-me
+```
+```
+/grill-me sobre Gitflow y resolución de conflictos
+```
+
+### Simulacro socrático de preguntas
+```
+Tómame un examen interactivo de 5 preguntas sobre [tema] basándote en el wiki. Hazme una pregunta a la vez y evalúa mi respuesta antes de pasar a la siguiente.
+```
+
+### Casos de Estudio y Debugging en vivo
+```
+Simula un incidente de producción con logs y stack traces ficticios sobre [tema] para que yo aplique el método científico de debugging.
+```
+
+### Práctica de Prompts y Descomposición
+```
+Dame un problema de software complejo y guíame para aplicar los 4 pilares del pensamiento computacional (descomposición, patrones, abstracción y algoritmos).
+```
+
+---
+
 ## 🔍 LINT — Health check del wiki
 
 ### Estándar

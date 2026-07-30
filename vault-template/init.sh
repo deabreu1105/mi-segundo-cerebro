@@ -210,8 +210,53 @@ if ! $FOUND_PLACEHOLDERS; then
   ok "Sin placeholders pendientes — vault correctamente personalizado"
 fi
 
+# ── Sincronizar puente Claude Code (symlinks .claude/) ──────────────────────
+# Esto SÍ se ejecuta incluso en --check: crear un symlink es una operación
+# aditiva e idempotente (nunca destruye ni reemplaza contenido), así que no
+# viola el contrato de "--check nunca modifica archivos existentes".
+header "6. Sincronizando puente Claude Code (.claude/)"
+
+mkdir -p .claude/agents .claude/commands
+
+sync_bridge() {
+  local src_dir="$1" dest_dir="$2"
+  [[ -d "$src_dir" ]] || return 0
+  local f name link
+  for f in "$src_dir"/*.md; do
+    [[ -e "$f" ]] || continue
+    name=$(basename "$f")
+    link="$dest_dir/$name"
+    if [[ -L "$link" ]]; then
+      : # symlink ya existe, nada que hacer
+    elif [[ -e "$link" ]]; then
+      warn "$link existe pero no es un symlink — revísalo a mano (no se toca)"
+      EXIT_CODE=1
+    else
+      ln -s "../../$src_dir/$name" "$link"
+      ok "Symlink creado: $link -> ../../$src_dir/$name"
+    fi
+  done
+}
+
+sync_bridge ".agents/agents" ".claude/agents"
+sync_bridge ".agents/skills" ".claude/commands"
+
+BROKEN_LINKS=false
+for link in .claude/agents/*.md .claude/commands/*.md; do
+  [[ -L "$link" ]] || continue
+  if [[ ! -e "$link" ]]; then
+    warn "Symlink roto: $link (el archivo original en .agents/ ya no existe)"
+    BROKEN_LINKS=true
+    EXIT_CODE=1
+  fi
+done
+
+if ! $BROKEN_LINKS; then
+  ok "Puente .claude/ sincronizado — todo agente/skill en .agents/ tiene su symlink"
+fi
+
 # ── Resumen ─────────────────────────────────────────────────────────────────
-header "6. Resumen"
+header "7. Resumen"
 
 if [[ $EXIT_CODE -eq 0 ]]; then
   printf "${GREEN}${BOLD}[OK]    Vault listo.${NC}\n"

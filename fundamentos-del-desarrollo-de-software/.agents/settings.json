@@ -1,6 +1,6 @@
 {
-  "$schema_comment": "Configuración del sistema de agentes del vault Segundo Cerebro.",
-  "version": "1.0",
+  "$schema_comment": "Registro de subagentes leído nativamente por Antigravity (.agents/agents/, .agents/skills/). Claude Code no lee este archivo — su enforcement real vive en .claude/settings.json, que apunta a los mismos .md vía symlink (.claude/agents/*.md, .claude/commands/*.md). No dupliques agentes: si añades uno nuevo, solo créalo aquí (.agents/agents/ o .agents/skills/) — init.sh --check autogenera el symlink correspondiente en .claude/ la próxima vez que corra (se dispara solo en cada sesión de Claude Code vía el hook SessionStart). No hace falta correr ln -s a mano.",
+  "version": "1.1",
   "agents": {
     "available": [
       {
@@ -21,12 +21,21 @@
         "trigger": "El humano dice 'Lint el wiki' o 'Health check'",
         "description": "Detecta contradicciones, huérfanas, gaps, cross-refs faltantes e index desactualizado."
       }
+    ],
+    "skills": [
+      {
+        "name": "grill-me",
+        "path": ".agents/skills/grill-me.md",
+        "trigger": "El humano escribe '/grill-me' o pide un examen socrático sobre un tema",
+        "description": "Examen interactivo de una pregunta a la vez basado exclusivamente en el contenido del wiki."
+      }
     ]
   },
   "startup": {
     "required_check": "./init.sh --check",
-    "description": "Antes de cualquier operación, verifica que init.sh pasa sin errores (vault inicializado, estructura OK)."
+    "description": "Antes de cualquier operación, verifica que init.sh pasa sin errores (vault inicializado, estructura OK). En Claude Code esto corre automáticamente vía el hook SessionStart en .claude/settings.json."
   },
+  "permissions_note": "Este bloque es documental — describe la intención, pero Antigravity y Claude Code cada uno tiene su propio mecanismo real de enforcement (ver docs de cada herramienta). Para Claude Code, la regla que sí se aplica está en .claude/settings.json (permissions.deny sobre Edit/Write en raw/**).",
   "permissions": {
     "allow": [
       "Bash(./init.sh)",
@@ -36,7 +45,9 @@
     ],
     "deny": [
       "Bash(rm*)",
-      "Bash(mv raw/*)"
+      "Bash(mv raw/*)",
+      "Edit(raw/**)",
+      "Write(raw/**)"
     ]
   }
 }

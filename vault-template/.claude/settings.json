@@ -1,0 +1,24 @@
+{
+  "$schema_comment": "Enforcement real para Claude Code. La versión documental/cross-tool de esto vive en .agents/settings.json — ese archivo NO se ejecuta, es solo el registro que Antigravity y el propio LLM leen como referencia.",
+  "permissions": {
+    "deny": [
+      "Edit(raw/**)",
+      "Write(raw/**)",
+      "Bash(rm*)",
+      "Bash(mv raw/*)"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./init.sh --check"
+          }
+        ]
+      }
+    ]
+  }
+}

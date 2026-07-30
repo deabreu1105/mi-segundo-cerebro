@@ -68,12 +68,19 @@ vault-template/
 │   ├── core-plugins.json   Plugins activos
 │   └── graph.json          Grupos de color por sección
 │
-├── .agents/                Sistema de subagentes (carpeta oculta)
+├── .agents/                Fuente de verdad para Antigravity (y para el LLM en general)
 │   ├── agents/
 │   │   ├── ingest.md       Workflow completo de INGEST
 │   │   ├── query.md        Workflow completo de QUERY
 │   │   └── lint.md         Workflow completo de LINT
-│   └── settings.json       Registro de subagentes y permisos
+│   ├── skills/
+│   │   └── grill-me.md     Examen socrático interactivo (/grill-me)
+│   └── settings.json       Registro de agentes/skills (documental)
+│
+├── .claude/                Solo para Claude Code
+│   ├── agents/             Symlinks → .agents/agents/*.md (mismos archivos)
+│   ├── commands/           Symlink → .agents/skills/grill-me.md
+│   └── settings.json       Enforcement real: permisos + hook SessionStart
 │
 ├── .templates/             Plantillas para nuevas páginas
 │   ├── concept.md
@@ -94,7 +101,8 @@ vault-template/
 │   ├── queries/
 │   └── sources/
 │
-├── AGENTS.md               🗺️  Root agent — punto de entrada del LLM
+├── AGENTS.md               🗺️  Root agent — punto de entrada real (Antigravity y estándar agents.md)
+├── CLAUDE.md               Puente de una línea (@AGENTS.md) para que Claude Code lea lo mismo
 ├── PROMPTS.md              🎯  Cheatsheet de prompts para el humano
 ├── HOME.md                 Punto de entrada del vault (Obsidian)
 ├── index.md                Índice navegable
@@ -131,9 +139,29 @@ Periódicamente: LINT → reporte de salud
 | **QUERY** | `"¿Qué sabemos sobre X?"` | Busca en wiki, sintetiza respuesta, archiva si es valiosa |
 | **LINT** | `"Lint el wiki"` | Contradicciones, huérfanas, gaps, sugerencias |
 
+---
+
+> **Multi-agente:** este template está pensado para usarse con más de un agente LLM (Antigravity,
+> Claude Code, etc.) sin duplicar instrucciones. `AGENTS.md` + `.agents/` son la única fuente de
+> verdad; `CLAUDE.md` y `.claude/` son puentes (import de una línea + symlinks) hacia esos mismos
+> archivos. Ver la sección "Multi-agente" en `AGENTS.md` antes de editar workflows o añadir un
+> nuevo skill.
+
+## 🎓 Flujo Ideal de Estudio (Active Learning Workflow)
+
+El wiki no es un libro pasivo; es un mapa interconectado de aprendizaje activo. El flujo de estudio óptimo consta de 5 fases:
+
+1. **🗺️ Mapa y Visión Macro (Graph View & Hubs):** Inicia en `index.md` o abre el Grafo Visual (`Ctrl+G` en Obsidian) para ubicar los Hubs de Conocimiento antes de profundizar.
+2. **📖 Lectura y Comprensión (Conceptos & Sources):** Lee notas atómicas en `wiki/concepts/` y consulta sus fuentes originales en `wiki/sources/`. Aplica *Rubber Duck Debugging* explicándote el concepto en voz alta.
+3. **💻 Práctica Deliberada en Vivo (Hands-on):** Abre la terminal o IDE real al lado de Obsidian y ejecuta los comandos, scripts Bash o flujos de Gitflow expuestos en las fuentes.
+4. **🧪 Autoevaluación socrática con IA (Quizes & Drill):** Solicita un examen interactivo utilizando la slash command `/grill-me` o pidiendo simulaciones de casos de estudio/bugs de producción.
+5. **🔄 Síntesis y Evolución del Wiki:** Registra tus dudas resueltas o hallazgos como nuevas notas en `wiki/queries/` o actualiza los conceptos.
+
+---
+
 ## Por Qué Funciona
 
 > *"The tedious part of maintaining a knowledge base is not the reading or the thinking — it's the bookkeeping."*  
 > — Andrej Karpathy
 
-Los LLMs hacen el bookkeeping; tú haces la curaduría y el pensamiento crítico.
+Los LLMs hacen el bookkeeping; tú haces la curaduría, el aprendizaje activo y el pensamiento crítico.

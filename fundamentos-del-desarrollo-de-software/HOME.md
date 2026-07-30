@@ -100,15 +100,25 @@ El agente: busca contradicciones → páginas huérfanas → cross-refs faltante
 
 ---
 
+## 🎓 Flujo de Estudio Activo (5 Fases)
+
+1. **🗺️ Mapa y Grafo:** Abre `index.md` o presiona `Ctrl+G` (Graph View) para ubicar los Hubs de Conocimiento.
+2. **📖 Lectura de Conceptos:** Lee notas en `wiki/concepts/` e inspeciona sus fuentes originales en `wiki/sources/`. Aplica *Patito de Goma*.
+3. **💻 Práctica Deliberada:** Ejecuta los comandos en la Terminal real, practica Gitflow o prueba atajos en el IDE.
+4. **🧪 Autoevaluación con IA:** Escribe `/grill-me` o pide simulacros socráticos/casos de error.
+5. **🔄 Evolución del Wiki:** Registra tus hallazgos o consultas en `wiki/queries/`.
+
+---
+
 ## 📊 Estado Actual
 
 | Métrica | Valor |
 |---------|-------|
-| Fuentes procesadas | 0 |
-| Entidades | 0 |
-| Conceptos | 0 |
-| Queries archivadas | 0 |
-| Última operación | — |
+| Fuentes procesadas | 9 |
+| Entidades | 5 |
+| Conceptos | 19 |
+| Queries archivadas | 2 |
+| Última operación | Ingesta Masiva Módulo 1 & Health Check 🟢 |
 
 *Actualizado automáticamente en cada ingest.*
 

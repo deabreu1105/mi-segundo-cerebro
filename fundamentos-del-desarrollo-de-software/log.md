@@ -253,6 +253,106 @@ El programador que no evoluciona hacia la mentalidad de arquitecto corre el ries
 4. ✅ **Actualizado `index.md`:**
    - Métricas globales actualizadas a 23 páginas y 13 conceptos.
 
+---
+
+## [2026-07-30] ingest | Ingesta Masiva Módulo 1 (Ecosistema Moderno)
+
+**Tipo:** Ingesta Masiva de Documentos Fuentes  
+**Agente:** Subagente INGEST v3.0  
+**Fuentes procesadas:** 4 nuevas fuentes en `raw/papers/`
+
+### Páginas creadas en `wiki/sources/`:
+- `wiki/sources/2026-07-30-terminal-y-linea-de-comandos.md`
+- `wiki/sources/2026-07-30-control-de-versiones-con-git-y-github.md`
+- `wiki/sources/2026-07-30-entornos-de-desarrollo-ide.md`
+- `wiki/sources/2026-07-30-ecosistema-del-desarrollo-de-software-moderno-conclusiones.md`
+
+### Páginas de conceptos creadas en `wiki/concepts/`:
+- `wiki/concepts/terminal-y-cli.md`
+- `wiki/concepts/shell-bash-zsh.md`
+- `wiki/concepts/redirecciones-y-pipes.md`
+- `wiki/concepts/control-de-versiones-git.md`
+- `wiki/concepts/github-y-colaboracion.md`
+- `wiki/concepts/entornos-de-desarrollo-ide.md`
+
+### Entidades creadas/actualizadas en `wiki/entities/`:
+- `wiki/entities/fernando-herrera.md` (Creada)
+- `wiki/entities/brais-moure.md` (Actualizada)
+- `wiki/entities/big-school.md` (Actualizada)
+
+### Mantenimiento e Índice:
+- `index.md` actualizado con 35 páginas totales y 9 fuentes.
+
+---
+
+## [2026-07-30] lint | Health Check del Wiki (Módulo 1 Completado)
+
+**Tipo:** Mantenimiento y Linting Global  
+**Agente:** Subagente LINT v3.0  
+**Resultado:** 🟢 Saludable
+
+### Resumen de auditoría de 7 puntos:
+1. ✅ **Contradicciones:** 0 encontradas.
+2. ✅ **Páginas huérfanas:** 0 encontradas (100% de las 35 páginas conectadas).
+3. ✅ **Conceptos desatendidos:** 0 encontrados.
+4. ✅ **Resolución de Wikilinks & Cross-references:** Auditadas 100% de las referencias. Se verifica la sintaxis cualificada `[[wiki/sources/...]]`.
+5. ℹ️ **Information Gaps:** Identificados vacíos de contenido para futuros módulos (Sintaxis de Lenguajes, TDD y CI/CD).
+6. ✅ **`index.md`:** Actualizado con el contador exacto de 35 páginas.
+7. ✅ **Frontmatter:** 100% de notas con metadata YAML válida.
+
+### Reporte archivado:
+- `wiki/queries/lint-2026-07-30.md`
+
+---
+
+## [2026-07-30] config | Arquitectura multi-agente (Antigravity + Claude Code)
+
+**Tipo:** Endurecimiento del ecosistema agéntico
+**Agente:** Claude Code
+
+### Acciones realizadas:
+1. ✅ Creado `CLAUDE.md` — puente de una línea (`@AGENTS.md`) para que Claude Code cargue el mismo
+   root agent que Antigravity, sin duplicar contenido.
+2. ✅ Creado `.agents/skills/grill-me.md` — el comando `/grill-me` mencionado en README/HOME/PROMPTS
+   no existía como archivo ejecutable; ahora sí, y Antigravity lo reconoce nativamente en `.agents/skills/`.
+3. ✅ Creados `.claude/agents/{ingest,query,lint}.md` y `.claude/commands/grill-me.md` como **symlinks**
+   hacia los archivos canónicos en `.agents/` — Claude Code ahora ejecuta subagentes reales
+   (contexto aislado vía Task tool) en vez de que el agente principal solo "lea" esos workflows.
+4. ✅ Creado `.claude/settings.json` — enforcement real para Claude Code:
+   - `permissions.deny` bloquea `Edit`/`Write` sobre `raw/**` a nivel de herramienta.
+   - Hook `SessionStart` corre `./init.sh --check` automáticamente al abrir sesión.
+5. ✅ Actualizado `.agents/settings.json` — añadido registro del skill `grill-me` y nota aclarando
+   que el enforcement real de Claude Code vive en `.claude/settings.json`.
+6. ✅ Actualizados `AGENTS.md` (nueva sección "Multi-agente") y `README.md` (árbol de estructura +
+   nota) para documentar la arquitectura de puentes/symlinks. La sección de estudio activo
+   personalizada de este vault (Rubber Duck Debugging, Gitflow, bugs de producción) no se tocó.
+
+### Por qué:
+Este vault se usa tanto con Antigravity (lee `AGENTS.md` y `.agents/` nativamente) como con Claude
+Code (requiere `CLAUDE.md` y `.claude/agents/`). Con symlinks hay un solo archivo real por
+workflow/skill — misma arquitectura ya aplicada en `vault-template/`.
+
+---
+
+## [2026-07-30] lint | Health Check (segunda pasada, post arquitectura multi-agente)
+
+**Tipo:** Mantenimiento y Linting Global
+**Agente:** Subagente LINT v3.0
+**Resultado:** 🟢 Saludable
+
+### Resumen de auditoría de 7 puntos:
+1. ✅ **Contradicciones:** 0 encontradas.
+2. ✅ **Páginas huérfanas:** 0 de 35.
+3. ⚠️ **Concepto sin página propia:** `[[deuda-tecnica]]` cruza el umbral de 3+ menciones — sugerido crear `wiki/concepts/deuda-tecnica.md` (no creado automáticamente, requiere confirmación).
+4. ✅ **Cross-references faltantes:** 0.
+5. ℹ️ **Gaps de información:** los mismos 2 de la pasada anterior siguen vigentes (Sintaxis de Lenguajes, TDD y CI/CD).
+6. ✅ **`index.md`:** contadores correctos; corregida la sección "Tags Más Usados" (estaba desactualizada, no reflejaba la frecuencia real de frontmatter).
+7. ✅ **Frontmatter:** 100% de notas con metadata YAML válida.
+
+### Reporte archivado:
+- Añadido como segunda sección en `wiki/queries/lint-2026-07-30.md` (mismo día que la ingesta del Módulo 1, no se creó archivo nuevo para evitar duplicar el nombre).
+
+
 
 
 

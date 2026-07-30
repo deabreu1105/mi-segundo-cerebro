@@ -18,7 +18,7 @@
    - `wiki/concepts/` — Para páginas de conceptos
    - `wiki/sources/` — Para summaries de fuentes
    - `wiki/queries/` — Para respuestas archivadas
-   - `_templates/` — Para plantillas reutilizables
+   - `.templates/` — Para plantillas reutilizables
    - `.agents/agents/` — Para subagentes especializados
 
 2. ✅ Creados archivos del sistema:
@@ -108,3 +108,38 @@ grep "^## \[2026-07-21\]" log.md
 - El agente LLM solo lee lo que necesita (divulgación progresiva)
 - Setup del vault automatizado con un solo comando: `./init.sh`
 - Workflows detallados aislados por operación
+
+---
+
+## [2026-07-30] config | Arquitectura multi-agente (Antigravity + Claude Code)
+
+**Tipo:** Endurecimiento del ecosistema agéntico
+**Agente:** Claude Code
+
+### Acciones realizadas:
+1. ✅ Creado `CLAUDE.md` — puente de una línea (`@AGENTS.md`) para que Claude Code cargue el mismo
+   root agent que Antigravity, sin duplicar contenido.
+2. ✅ Creado `.agents/skills/grill-me.md` — el comando `/grill-me` mencionado en README/HOME/PROMPTS
+   no existía como archivo ejecutable; ahora sí, y Antigravity lo reconoce nativamente en `.agents/skills/`.
+3. ✅ Creados `.claude/agents/{ingest,query,lint}.md` y `.claude/commands/grill-me.md` como **symlinks**
+   hacia los archivos canónicos en `.agents/` — Claude Code ahora ejecuta subagentes reales
+   (contexto aislado vía Task tool) en vez de que el agente principal solo "lea" esos workflows.
+4. ✅ Creado `.claude/settings.json` — enforcement real para Claude Code:
+   - `permissions.deny` bloquea `Edit`/`Write` sobre `raw/**` a nivel de herramienta (antes solo
+     era una instrucción de prompt en `AGENTS.md`, sin garantía técnica).
+   - Hook `SessionStart` corre `./init.sh --check` automáticamente al abrir sesión.
+5. ✅ Actualizado `.agents/settings.json` — añadido registro del skill `grill-me`, y una nota
+   aclarando que ese archivo es documental (lo lee Antigravity/el LLM), mientras que el
+   enforcement real de Claude Code vive en `.claude/settings.json`.
+6. ✅ Actualizados `AGENTS.md` (nueva sección "Multi-agente") y `README.md` (árbol de estructura)
+   para documentar la arquitectura de puentes/symlinks.
+
+### Por qué:
+El vault se usa con Antigravity (que ya lee `AGENTS.md` y `.agents/agents/` nativamente) y con
+Claude Code (que requiere `CLAUDE.md` y `.claude/agents/`). Sin esto, había que mantener dos
+copias de cada workflow — con symlinks, hay un solo archivo real por workflow/skill.
+
+### Nota sin verificar:
+No se confirmó si Antigravity ignora silenciosamente campos de frontmatter que no reconoce
+(p. ej. `allowed-tools` de Claude Code en `grill-me.md`). Si `/grill-me` se comporta raro en
+Antigravity, revisar el frontmatter de `.agents/skills/grill-me.md` primero.
