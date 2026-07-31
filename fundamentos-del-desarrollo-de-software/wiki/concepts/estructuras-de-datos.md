@@ -2,8 +2,8 @@
 type: concept
 created: 2026-07-30
 updated: 2026-07-30
-tags: [estructuras-de-datos, arrays, pilas, colas, mapas, sets, programacion]
-related: [diseno-de-algoritmos, funciones-y-parametros]
+tags: [estructuras-de-datos, arrays, pilas, colas, mapas, sets, tuplas, programacion]
+related: [diseno-de-algoritmos, funciones-y-parametros, python-como-lenguaje]
 ---
 
 # Estructuras de Datos
@@ -18,6 +18,7 @@ Las estructuras de datos son las distintas formas de organizar información en m
 - **Cola (*Queue*, FIFO):** el primer elemento en entrar es el primero en salir (`ENQUEUE`/`DEQUEUE`) — colas de impresión, tareas asíncronas.
 - **Mapa/Diccionario (*Hash Table*):** pares clave-valor con claves únicas, acceso casi instantáneo O(1) mediante hashing.
 - **Set:** colección no ordenada que garantiza automáticamente la ausencia de duplicados.
+- **Tupla:** secuencia ordenada e **inmutable** — una vez creada no puede modificarse (intentarlo provoca un error). Es el ejemplo canónico de estructura de datos inmutable, base de la programación funcional segura en concurrencia.
 
 ## Applications
 - Elegir Array vs. Lista según si el tamaño de los datos es conocido de antemano.
@@ -46,13 +47,15 @@ Añadir "Verde" --> El Set permanece igual (omite el duplicado)
 | **Cola** | Dinámico | Permitidos | Solo al frente (FIFO) | Procesamiento por turno. |
 | **Mapa** | Dinámico | Claves Únicas | Por Clave (O(1)) | Búsqueda por identificador. |
 | **Set** | Dinámico | Prohibidos | Verificación de pertenencia | Garantía de valores únicos. |
+| **Tupla** | Fijo | Permitidos | Por Índice (O(1)) | Datos que no deben cambiar tras su creación. |
 
 ## Sources
 - [[wiki/sources/2026-07-30-estructuras-de-datos]] — taxonomía completa y cuadro comparativo.
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — estructuras de datos como "archivadores lógicos".
+- [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — la tupla como estructura inmutable nativa de Python.
 
 ## Related Concepts
-[[diseno-de-algoritmos]], [[funciones-y-parametros]], [[pensamiento-computacional]]
+[[diseno-de-algoritmos]], [[funciones-y-parametros]], [[pensamiento-computacional]], [[python-como-lenguaje]], [[funciones-puras-y-efectos-secundarios]]
 
 ## Open Questions
 - ¿En qué punto de escala deja de ser preferible una lista/array sobre un mapa cuando la búsqueda por clave es el patrón de acceso dominante?

@@ -40,9 +40,10 @@ int entero = (int) 3.99;  // Casting explícito → 3
 ## Sources
 - [[wiki/sources/2026-07-30-variables-tipos-de-datos-y-operadores]] — ciclo de vida, tipado, coerción/casting y operadores.
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — variables como "materia prima" de todo programa.
+- [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — implementación concreta en Python: `snake_case`, f-strings, casting con `int()`.
 
 ## Related Concepts
-[[tipado-estatico-vs-dinamico]], [[paso-por-valor-vs-referencia]], [[scope-y-lifetime]], [[deuda-tecnica]]
+[[tipado-estatico-vs-dinamico]], [[paso-por-valor-vs-referencia]], [[scope-y-lifetime]], [[deuda-tecnica]], [[python-como-lenguaje]]
 
 ## Open Questions
 - ¿Qué convenciones de linting detectan de forma más fiable la confusión entre `=` (asignación) y `==` (comparación) antes de producción?

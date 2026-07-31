@@ -43,9 +43,11 @@ VARIABLE factura = CalcularPrecioTotal(100, 0.19)
 ## Sources
 - [[wiki/sources/2026-07-30-funciones-y-parametros]] — anatomía, parámetros vs. argumentos, scope y shadowing.
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — funciones como "transición a la artesanía técnica".
+- [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — parámetros con valor por defecto en Python (`rate=0.21`).
+- [[wiki/sources/2026-07-30-programacion-orientada-a-objetos]] — `self` como caso particular de parámetro implícito en métodos de instancia.
 
 ## Related Concepts
-[[paso-por-valor-vs-referencia]], [[scope-y-lifetime]], [[funciones-puras-y-efectos-secundarios]], [[descomposicion]]
+[[paso-por-valor-vs-referencia]], [[scope-y-lifetime]], [[funciones-puras-y-efectos-secundarios]], [[descomposicion]], [[programacion-orientada-a-objetos]]
 
 ## Open Questions
 - ¿Cuántos parámetros posicionales son razonables antes de que una función deba refactorizarse para recibir un objeto de configuración?

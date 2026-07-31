@@ -55,9 +55,10 @@ def realizar_retiro(cuenta, monto):
 ## Sources
 - [[wiki/sources/2026-07-30-manejo-de-errores-y-excepciones]] — taxonomía, TRY/CATCH/FINALLY, throw/propagación, excepciones personalizadas.
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — manejo de errores como "red de seguridad" del desarrollo profesional.
+- [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — implementación concreta con `try/except ValueError` en Python.
 
 ## Related Concepts
-[[metodologia-de-debugging]], [[stack-trace]]
+[[metodologia-de-debugging]], [[stack-trace]], [[python-como-lenguaje]]
 
 ## Open Questions
 - ¿Cómo se equilibra la granularidad de excepciones personalizadas (muchas clases específicas) contra la simplicidad de mantenimiento del árbol de excepciones?

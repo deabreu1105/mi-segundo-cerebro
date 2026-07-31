@@ -25,6 +25,7 @@ La **Descomposición** (bajo el principio de *divide y vencerás*) es el pilar d
 - [[wiki/sources/2026-07-29-fundamentos-del-pensamiento-computacional]] — Definición como primer pilar del pensamiento computacional.
 - [[wiki/sources/2026-07-29-ejercicios-practicos-pensamiento-computacional]] — Ejemplo atómico del Robot y el Sándwich.
 - [[wiki/sources/2026-07-30-funciones-y-parametros]] — DRY y responsabilidad única como descomposición aplicada a funciones.
+- [[wiki/sources/2026-07-30-modularidad-en-python]] — descomposición aplicada a la organización física del código en módulos y paquetes.
 
 ## Related Concepts
 - [[pensamiento-computacional]]
@@ -32,6 +33,7 @@ La **Descomposición** (bajo el principio de *divide y vencerás*) es el pilar d
 - [[diseno-de-algoritmos]]
 - [[funciones-y-parametros]]
 - [[deuda-tecnica]]
+- [[modularidad-modulos-y-paquetes]]
 
 ## Open Questions
 - ¿Cuándo una descomposición excesivamente detallada añade sobrecoste de integración (*overhead*) sin aportar claridad?

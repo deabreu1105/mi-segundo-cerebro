@@ -396,6 +396,51 @@ workflow/skill — misma arquitectura ya aplicada en `vault-template/`.
 ### Insights destacados:
 El eje **paso por valor vs. por referencia** y **scope/lifetime** aparece primero en variables y reaparece idéntico en funciones — quedó modelado como concepto propio compartido entre ambas fuentes en vez de duplicarse. El manejo de errores conecta directamente con la metodología de debugging y el stack trace del Módulo 0 (prevención estructural vs. investigación posterior del mismo fenómeno).
 
+---
+
+## [2026-07-30] ingest | Ingesta Masiva Módulo 3 (Lenguajes de Programación / Python)
+
+**Tipo:** Ingesta Masiva de Documentos Fuentes
+**Agente:** Subagente INGEST v3.0
+**Fuentes procesadas:** 8 nuevas fuentes en `raw/papers/`
+
+### Páginas creadas en `wiki/sources/`:
+- `wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion.md`
+- `wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion.md`
+- `wiki/sources/2026-07-30-programacion-orientada-a-objetos.md`
+- `wiki/sources/2026-07-30-programacion-funcional.md`
+- `wiki/sources/2026-07-30-modularidad-en-python.md`
+- `wiki/sources/2026-07-30-gestion-de-entornos-y-dependencias.md`
+- `wiki/sources/2026-07-30-asincronia-en-python.md`
+- `wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales.md`
+
+### Páginas de conceptos creadas en `wiki/concepts/`:
+- `wiki/concepts/niveles-de-abstraccion.md`
+- `wiki/concepts/paradigmas-de-programacion.md`
+- `wiki/concepts/python-como-lenguaje.md`
+- `wiki/concepts/programacion-orientada-a-objetos.md`
+- `wiki/concepts/funciones-de-orden-superior.md`
+- `wiki/concepts/modularidad-modulos-y-paquetes.md`
+- `wiki/concepts/entornos-virtuales-y-dependencias.md`
+- `wiki/concepts/programacion-asincrona.md`
+
+### Entidades actualizadas en `wiki/entities/`:
+- `wiki/entities/big-school.md` (8 nuevas fuentes añadidas a "Mentions & Connections")
+
+### Conceptos existentes extendidos (sin duplicar, cross-refs bidireccionales):
+- `wiki/concepts/compilacion-e-interpretacion.md` — añadido el tercer modelo híbrido/JIT (Java, C#).
+- `wiki/concepts/estructuras-de-datos.md` — añadida la **Tupla** (inmutable) al catálogo, que no estaba cubierta en el Módulo 2.
+- `wiki/concepts/manejo-de-errores-y-excepciones.md` — añadido `try/except` de Python como implementación concreta.
+- `wiki/concepts/funciones-y-parametros.md` — añadidos parámetros por defecto en Python y `self` como caso particular.
+- `wiki/concepts/funciones-puras-y-efectos-secundarios.md` — añadida inmutabilidad como complemento de la pureza.
+- `wiki/concepts/descomposicion.md`, `wiki/concepts/deuda-tecnica.md`, `wiki/concepts/mentalidad-de-arquitecto.md`, `wiki/concepts/variables-y-tipos-de-datos.md`, `wiki/concepts/tipado-estatico-vs-dinamico.md` — cross-refs a las nuevas fuentes.
+
+### Mantenimiento e Índice:
+- `index.md` actualizado: 71 páginas totales, 24 fuentes, 40 conceptos. Nueva sección "Módulo 3: Lenguajes de Programación (Python)" en fuentes y conceptos. Dos hubs nuevos (`python-como-lenguaje`, `paradigmas-de-programacion`).
+
+### Insights destacados:
+La Tupla de Python llenó un hueco real en `estructuras-de-datos` (el Módulo 2 nunca cubrió estructuras inmutables). La inmutabilidad conecta tres conceptos que antes vivían separados: `estructuras-de-datos` (tupla), `funciones-puras-y-efectos-secundarios` (determinismo) y `paso-por-valor-vs-referencia` (mutación por referencia) — los tres describen la misma propiedad desde ángulos distintos.
+
 
 
 

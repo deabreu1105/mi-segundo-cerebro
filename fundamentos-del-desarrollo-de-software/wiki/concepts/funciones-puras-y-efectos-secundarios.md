@@ -16,6 +16,7 @@ Una **función pura** produce siempre el mismo resultado para los mismos argumen
 - Los efectos secundarios pueden generar comportamientos imprevistos si no se gestionan con cuidado — especialmente al combinarse con [[paso-por-valor-vs-referencia|paso por referencia]].
 - Preferir funciones puras siempre que sea posible mejora la mantenibilidad y la previsibilidad del sistema.
 - No toda función puede ser pura: imprimir en pantalla, escribir logs o consultar una base de datos son efectos secundarios necesarios — la disciplina consiste en aislarlos, no eliminarlos.
+- **Inmutabilidad como complemento de la pureza:** trabajar con datos inmutables (tuplas, strings, `frozenset`) refuerza la pureza porque elimina la posibilidad de mutar un argumento por referencia — es la misma garantía vista desde el lado de los datos en vez del lado de la función.
 
 ## Applications
 - Diseño de lógica de negocio central como funciones puras, dejando I/O (red, disco, UI) en una capa separada y explícita.
@@ -42,9 +43,10 @@ def agregar_item(lista):
 
 ## Sources
 - [[wiki/sources/2026-07-30-funciones-y-parametros]] — distinción entre funciones puramente computacionales y funciones con efectos secundarios.
+- [[wiki/sources/2026-07-30-programacion-funcional]] — funciones puras e inmutabilidad como pilares del paradigma funcional en Python.
 
 ## Related Concepts
-[[funciones-y-parametros]], [[paso-por-valor-vs-referencia]]
+[[funciones-y-parametros]], [[paso-por-valor-vs-referencia]], [[funciones-de-orden-superior]], [[estructuras-de-datos]]
 
 ## Open Questions
 - ¿Qué proporción de funciones puras vs. con efectos secundarios es razonable exigir como estándar de calidad en un code review?

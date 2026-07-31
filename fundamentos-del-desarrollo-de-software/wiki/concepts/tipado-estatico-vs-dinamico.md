@@ -43,9 +43,10 @@ miVariable = "Hola"; // ERROR DE COMPILACIÓN
 
 ## Sources
 - [[wiki/sources/2026-07-30-variables-tipos-de-datos-y-operadores]] — definición y ejemplos comparativos de ambos.
+- [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — Python como caso concreto de tipado dinámico con inferencia.
 
 ## Related Concepts
-[[variables-y-tipos-de-datos]]
+[[variables-y-tipos-de-datos]], [[python-como-lenguaje]]
 
 ## Open Questions
 - ¿En qué medida el tipado gradual (TypeScript, Python con type hints) resuelve realmente el trade-off, o solo lo desplaza a tiempo de linting?

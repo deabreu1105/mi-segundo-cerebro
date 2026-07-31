@@ -44,9 +44,11 @@ def calcular_precio_con_iva(precio_base, cantidad):
 - [[wiki/sources/2026-07-29-metodologias-de-resolucion-de-problemas]] — el ensayo-y-error como generador de deuda técnica oculta.
 - [[wiki/sources/2026-07-29-conclusiones-pensamiento-computacional-y-resolucion-de-problemas]] — la mentalidad de arquitecto como antídoto a su acumulación.
 - [[wiki/sources/2026-07-30-variables-tipos-de-datos-y-operadores]] — nomenclatura de variables como herramienta directa de mantenimiento.
+- [[wiki/sources/2026-07-30-modularidad-en-python]] — código monolítico sin modularidad como fuente directa de deuda técnica.
+- [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales]] — la arquitectura modular como freno al crecimiento exponencial de la deuda técnica.
 
 ## Related Concepts
-[[mentalidad-de-arquitecto]], [[variables-y-tipos-de-datos]], [[metodologia-de-debugging]]
+[[mentalidad-de-arquitecto]], [[variables-y-tipos-de-datos]], [[metodologia-de-debugging]], [[modularidad-modulos-y-paquetes]], [[entornos-virtuales-y-dependencias]]
 
 ## Open Questions
 - ¿Qué métrica objetiva permite cuantificar deuda técnica más allá de la intuición o revisión manual de código?

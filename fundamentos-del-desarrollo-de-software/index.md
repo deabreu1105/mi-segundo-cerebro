@@ -1,8 +1,8 @@
 # 📚 Índice del Wiki — Fundamentos del desarrollo de software
 
 > **Última actualización:** 2026-07-30  
-> **Total de páginas:** 55  
-> **Total de fuentes procesadas:** 16
+> **Total de páginas:** 71  
+> **Total de fuentes procesadas:** 24
 
 ---
 
@@ -38,6 +38,16 @@
 - [[wiki/sources/2026-07-30-funciones-y-parametros|2026-07-30-funciones-y-parametros]] — Modularización, DRY, parámetros vs. argumentos y funciones puras por BIG School
 - [[wiki/sources/2026-07-30-manejo-de-errores-y-excepciones|2026-07-30-manejo-de-errores-y-excepciones]] — Taxonomía de errores, TRY/CATCH/FINALLY y excepciones personalizadas por BIG School
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones|2026-07-30-fundamentos-de-la-programacion-conclusiones]] — Síntesis del Módulo 2 bajo el marco del pensamiento computacional por BIG School
+
+### Módulo 3: Lenguajes de Programación (Python)
+- [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion|2026-07-30-introduccion-a-los-lenguajes-de-programacion]] — Niveles de abstracción, paradigmas y modelos de ejecución (incluye híbrido/JIT) por BIG School
+- [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion|2026-07-30-bases-de-los-lenguajes-de-programacion]] — Sintaxis básica de Python: variables, f-strings, control de flujo, colecciones y excepciones por BIG School
+- [[wiki/sources/2026-07-30-programacion-orientada-a-objetos|2026-07-30-programacion-orientada-a-objetos]] — Clases, constructor, encapsulación, herencia y polimorfismo en Python por BIG School
+- [[wiki/sources/2026-07-30-programacion-funcional|2026-07-30-programacion-funcional]] — Funciones puras, inmutabilidad, funciones de orden superior y lambda por BIG School
+- [[wiki/sources/2026-07-30-modularidad-en-python|2026-07-30-modularidad-en-python]] — Módulos, paquetes, `__init__.py` y sintaxis de importación por BIG School
+- [[wiki/sources/2026-07-30-gestion-de-entornos-y-dependencias|2026-07-30-gestion-de-entornos-y-dependencias]] — Entornos virtuales (`venv`), `pip` y `requirements.txt` por BIG School
+- [[wiki/sources/2026-07-30-asincronia-en-python|2026-07-30-asincronia-en-python]] — `asyncio`, `async`/`await`, event loop e I/O-bound vs. CPU-bound por BIG School
+- [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales|2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales]] — Síntesis del Módulo 3: Python, funcional, asincronía y modularidad por BIG School
 
 ---
 
@@ -100,6 +110,16 @@
 - [[funciones-puras-y-efectos-secundarios]] — Determinismo vs. modificación de estado externo
 - [[manejo-de-errores-y-excepciones]] — Taxonomía de errores, TRY/CATCH/FINALLY, throw y propagación
 
+### Lenguajes de Programación y Python
+- [[niveles-de-abstraccion]] — De binario/ensamblador a Python/SQL, según proximidad al hardware
+- [[paradigmas-de-programacion]] — Imperativo, orientado a objetos, funcional y declarativo
+- [[python-como-lenguaje]] — Sintaxis, convenciones y ecosistema del lenguaje elegido para el módulo
+- [[programacion-orientada-a-objetos]] — Clases, objetos, encapsulación, herencia y polimorfismo
+- [[funciones-de-orden-superior]] — Funciones de primera clase, map/filter/lambda y comprehensions
+- [[modularidad-modulos-y-paquetes]] — Módulos, paquetes, `__init__.py` y sintaxis de importación
+- [[entornos-virtuales-y-dependencias]] — `venv`, `pip`, `requirements.txt` y version pinning
+- [[programacion-asincrona]] — `async`/`await`, event loop e I/O-bound vs. CPU-bound
+
 ---
 
 ## 🔍 Queries Archivadas (`wiki/queries/`)
@@ -113,13 +133,13 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Fuentes totales | 16 |
+| Fuentes totales | 24 |
 | Entidades (personas) | 4 |
 | Entidades (orgs/lugares) | 1 |
-| Conceptos | 32 |
+| Conceptos | 40 |
 | Queries archivadas | 2 |
 | Páginas huérfanas | 0 |
-| Última operación | Ingesta Masiva Módulo 2 (Fundamentos de la Programación) 🟢 |
+| Última operación | Ingesta Masiva Módulo 3 (Lenguajes de Programación / Python) 🟢 |
 
 ---
 
@@ -141,6 +161,8 @@
 - [[metodologia-de-debugging]] — Hub de técnicas forenses y diagnósticos científicos de código
 - [[funciones-y-parametros]] — Hub de modularización: conecta scope, paso por valor/referencia y funciones puras
 - [[variables-y-tipos-de-datos]] — Hub de la materia prima de datos: tipado, scope y deuda técnica
+- [[python-como-lenguaje]] — Hub del Módulo 3: conecta sintaxis, tipado, estructuras de datos y paradigmas
+- [[paradigmas-de-programacion]] — Hub de estilos de programación: imperativo, POO, funcional y declarativo
 
 ---
 
@@ -154,4 +176,4 @@
 
 ---
 
-**🚀 Estado:** Ingesta masiva del Módulo 2 (Fundamentos de la Programación) completada. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.
+**🚀 Estado:** Ingesta masiva del Módulo 3 (Lenguajes de Programación / Python) completada. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.

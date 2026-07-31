@@ -32,7 +32,15 @@ Academia tecnológica y plataforma de formación avanzada especializada en progr
   - [[wiki/sources/2026-07-30-funciones-y-parametros]]
   - [[wiki/sources/2026-07-30-manejo-de-errores-y-excepciones]]
   - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]]
-- Relacionado con: [[brais-moure]], [[pensamiento-computacional]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]], [[funciones-y-parametros]], [[manejo-de-errores-y-excepciones]]
+  - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion]]
+  - [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]]
+  - [[wiki/sources/2026-07-30-programacion-orientada-a-objetos]]
+  - [[wiki/sources/2026-07-30-programacion-funcional]]
+  - [[wiki/sources/2026-07-30-modularidad-en-python]]
+  - [[wiki/sources/2026-07-30-gestion-de-entornos-y-dependencias]]
+  - [[wiki/sources/2026-07-30-asincronia-en-python]]
+  - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales]]
+- Relacionado con: [[brais-moure]], [[pensamiento-computacional]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]], [[funciones-y-parametros]], [[manejo-de-errores-y-excepciones]], [[python-como-lenguaje]], [[programacion-orientada-a-objetos]]
 
 ## Notes
-Provee el material académico fuente del Módulo 0 (Fundamentos del Desarrollo de Software), incluyendo el Módulo 2 sobre Fundamentos de la Programación (variables, control de flujo, estructuras de datos, funciones y manejo de errores).
+Provee el material académico fuente del Módulo 0 (Fundamentos del Desarrollo de Software), incluyendo el Módulo 2 sobre Fundamentos de la Programación (variables, control de flujo, estructuras de datos, funciones y manejo de errores) y el Módulo 3 sobre Lenguajes de Programación (Python: sintaxis, POO, funcional, modularidad, entornos y asincronía).

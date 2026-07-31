@@ -25,12 +25,14 @@ La **Mentalidad de Arquitecto** es la postura profesional y estratégica que ado
 - [[wiki/sources/2026-07-29-fundamentos-del-pensamiento-computacional]] — Transición de ejecutor a arquitecto.
 - [[wiki/sources/2026-07-29-conclusiones-pensamiento-computacional-y-resolucion-de-problemas]] — El imperativo de la mentalidad de arquitecto.
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — Dominar los fundamentos de programación como ventaja estratégica de mercado.
+- [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales]] — robustez técnica (no solo ejecutar una idea) como lo que hace escalable una solución.
 
 ## Related Concepts
 - [[pensamiento-computacional]]
 - [[soberania-humana-en-ia]]
 - [[llm-wiki-pattern]]
 - [[deuda-tecnica]]
+- [[programacion-orientada-a-objetos]]
 
 ## Open Questions
 - ¿Qué metodologías de mentoría aceleran el desarrollo de la mentalidad de arquitecto en ingenieros junior?
