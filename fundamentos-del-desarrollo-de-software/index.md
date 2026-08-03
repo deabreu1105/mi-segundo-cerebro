@@ -1,8 +1,8 @@
 # 📚 Índice del Wiki — Fundamentos del desarrollo de software
 
 > **Última actualización:** 2026-08-03  
-> **Total de páginas:** 100  
-> **Total de fuentes procesadas:** 44
+> **Total de páginas:** 102  
+> **Total de fuentes procesadas:** 45
 
 ---
 
@@ -74,6 +74,9 @@
 - [[wiki/sources/2026-08-03-deuda-tecnica-y-refactorizacion|2026-08-03-deuda-tecnica-y-refactorizacion]] — Causas y consecuencias de la deuda técnica, refactorización y la "Regla de Oro" de los tests por BIG School
 - [[wiki/sources/2026-08-03-etica-en-el-desarrollo|2026-08-03-etica-en-el-desarrollo]] — Responsabilidad civil del código, sesgos algorítmicos, privacidad por diseño (GDPR) y licencias Open Source por BIG School
 - [[wiki/sources/2026-08-03-conclusiones-buenas-practicas-desarrollo-software|2026-08-03-conclusiones-buenas-practicas-desarrollo-software]] — Síntesis del Módulo 5: estilo, debugging, testing, deuda técnica y ética como una sola disciplina por BIG School
+
+### Proyecto Integrador (Capstone)
+- [[wiki/sources/2026-08-03-aplicacion-integradora-de-conceptos-taskmanager|2026-08-03-aplicacion-integradora-de-conceptos-taskmanager]] — Proyecto real TaskManager: arquitectura modular, persistencia JSON, API de OpenAI con `.env` y tests con `unittest.mock` por BIG School / MoureDev
 
 ---
 
@@ -165,6 +168,7 @@
 
 - [[lint-2026-07-29]] — Reporte de salud global (linting) tras la ingesta del Módulo 0
 - [[lint-2026-07-30]] — Reporte de salud global (linting) tras la ingesta masiva del Módulo 1 (Ecosistema Moderno)
+- [[lint-2026-08-03]] — Health-check tras los Módulos 3 (2ª pasada), 4, 5 y el proyecto integrador TaskManager: 0 huérfanas, 1 enlace sin cualificar corregido, tags recalculados
 
 ---
 
@@ -172,21 +176,21 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Fuentes totales | 44 |
+| Fuentes totales | 45 |
 | Entidades (personas) | 4 |
 | Entidades (orgs/lugares) | 1 |
 | Conceptos | 49 |
-| Queries archivadas | 2 |
+| Queries archivadas | 3 |
 | Páginas huérfanas | 0 |
-| Última operación | Ingesta Módulo 5 — Buenas Prácticas del Desarrollo de Software (6 fuentes, 4 conceptos nuevos) 🟢 |
+| Última operación | Lint / Health-Check 2026-08-03 (1 enlace sin cualificar corregido, tags recalculados) 🟢 |
 
 ---
 
 ## 🏷️ Tags Más Usados
 
-`#ia` (6) `#debugging` (6) `#arquitectura` (5) `#pilar` (4) `#persona` (4) `#git` (4) `#terminal` (3) `#stack-trace` (3) `#pensamiento-computacional` (3) `#logs` (3) `#ide` (3) `#descomposicion` (3) `#breakpoints` (3)
+`#python` (27) `#programacion` (20) `#arquitectura` (13) `#debugging` (8) `#testing` (7) `#ia` (7) `#deuda-tecnica` (6) `#sintesis` (5) `#sintaxis` (5) `#git` (5) `#fundamentos` (5) `#concurrencia` (5) `#tipos-de-datos` (4) `#programacion-funcional` (4) `#poo` (4)
 
-*(Recalculado por frecuencia real de `tags:` en frontmatter — reemplaza la lista anterior, que listaba `#bash`/`#github`/`#gitflow`/`#vscode` como "más usados" con solo 2 menciones cada uno.)*
+*(Recalculado por frecuencia real de `tags:` en frontmatter tras la ingesta de los Módulos 3-5 y el proyecto integrador — reemplaza la lista anterior, centrada solo en el contenido de los Módulos 0-1.)*
 
 ---
 
@@ -219,4 +223,4 @@
 
 ---
 
-**🚀 Estado:** Ingesta del Módulo 5 (Buenas Prácticas del Desarrollo de Software — 6 fuentes nuevas, 4 conceptos nuevos: estilo de código, testing, refactorización, ética) completada. Las 6 fuentes se encontraron mal ubicadas en `wiki/sources/` y se reubicaron a `raw/papers/` antes de procesarlas. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.
+**🚀 Estado:** Ingesta del proyecto integrador TaskManager (capstone del Máster) completada — 1 fuente encontrada mal ubicada en `wiki/sources/` (misma anomalía que el Módulo 5), reubicada a `raw/papers/` y procesada sin generar conceptos nuevos, integrando 14 conceptos ya existentes con código real. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.

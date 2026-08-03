@@ -17,6 +17,7 @@ El **testing automatizado** es la práctica de escribir código para verificar c
 - **Test End-to-End / E2E (cúspide):** simula un flujo de usuario real de extremo a extremo (UI, red, base de datos). Reservado a los flujos de negocio más críticos por su fragilidad y coste de mantenimiento.
 - **Regla de aislamiento:** si un test "unitario" falla porque el servidor no responde, en realidad es un test de integración mal clasificado.
 - **`unittest` (librería estándar de Python):** agrupa tests en una clase que hereda de `unittest.TestCase`; cada test es un método `test_*`; las aserciones (`assertEqual`, `assertIn`) determinan el éxito/fallo.
+- **Mocking (`unittest.mock`):** `patch`/`mock_open` sustituyen dependencias reales (disco, red, BD) por dobles controlados — es lo que permite que un test unitario cumpla estrictamente su definición de "aislado", incluso cuando el código de producción sí lee/escribe archivos.
 - **Trade-off de la pirámide:** a medida que se sube (hacia E2E), el coste de mantenimiento aumenta y la velocidad de ejecución disminuye drásticamente — por eso la base debe ser mucho más ancha que la cúspide.
 - **El testing es una decisión financiera**, no una fase final: minimiza costes de mantenimiento a largo plazo y reduce el tiempo medio de reparación (MTTR).
 
@@ -47,6 +48,7 @@ class TestCalculadora(unittest.TestCase):
 ## Sources
 - [[wiki/sources/2026-08-03-testing]] — pirámide de testing, `unittest`, aserciones, caso con bug intencionado.
 - [[wiki/sources/2026-08-03-conclusiones-buenas-practicas-desarrollo-software]] — el testing como transformador de la mentalidad organizacional, síntesis final del Módulo 5.
+- [[wiki/sources/2026-08-03-aplicacion-integradora-de-conceptos-taskmanager]] — ejemplo real de `unittest.mock` (`patch`, `mock_open`) aislando `TaskManager` del disco.
 
 ## Related Concepts
 [[refactorizacion]], [[deuda-tecnica]], [[funciones-y-parametros]], [[metodologia-de-debugging]]
@@ -57,4 +59,4 @@ class TestCalculadora(unittest.TestCase):
 ---
 
 **Última actualización:** 2026-08-03
-**Aparece en:** 2 fuentes
+**Aparece en:** 3 fuentes

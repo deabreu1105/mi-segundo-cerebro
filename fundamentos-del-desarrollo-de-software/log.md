@@ -559,7 +559,7 @@ Ningún archivo de `raw/` fue modificado en el proceso (solo reubicado desde una
 **Fuentes procesadas:** 6 nuevas fuentes en `raw/papers/` (recién reubicadas, ver entrada de mantenimiento anterior)
 
 ### Contexto y decisión de scope:
-Igual que el Módulo 4, estas 6 fuentes cubren territorio mayormente nuevo (estilo de código, testing, ética), aunque dos de ellas ([[deuda-tecnica-y-refactorizacion]]) profundizan significativamente un concepto ya existente desde el Módulo 0 ([[deuda-tecnica]]). Se crean 4 conceptos nuevos y se extienden 6 conceptos existentes.
+Igual que el Módulo 4, estas 6 fuentes cubren territorio mayormente nuevo (estilo de código, testing, ética), aunque una de ellas ([[wiki/sources/2026-08-03-deuda-tecnica-y-refactorizacion]]) profundiza significativamente un concepto ya existente desde el Módulo 0 ([[deuda-tecnica]]). Se crean 4 conceptos nuevos y se extienden 6 conceptos existentes.
 
 ### Páginas creadas en `wiki/sources/`:
 - `wiki/sources/2026-08-03-estilo-del-codigo.md`
@@ -591,6 +591,62 @@ Igual que el Módulo 4, estas 6 fuentes cubren territorio mayormente nuevo (esti
 
 ### Insights destacados:
 Este módulo resuelve explícitamente una pregunta abierta que el propio wiki había señalado desde el lint del Módulo 2 ("¿qué fuente futura cubriría testing automatizado?") — cerrando un gap de conocimiento identificado varias sesiones atrás. Además, el hallazgo de los 6 archivos mal ubicados confirma el valor del protocolo de escaneo bidireccional (`raw/` → `wiki/sources/` y viceversa): no basta con buscar pendientes en `raw/`, también hay que vigilar que `wiki/sources/` no contenga contenido crudo sin procesar depositado por error.
+
+---
+
+## [2026-08-03] mantenimiento + ingest | Proyecto Integrador TaskManager (Capstone)
+
+**Tipo:** Corrección de ubicación + Ingesta de fuente única
+**Agente:** Subagente INGEST v3.0
+
+### Hallazgo (mismo patrón que la entrada anterior):
+Un nuevo rescan `raw/` ↔ `wiki/sources/` detectó otro archivo sin backing: `wiki/sources/2026-08-03-aplicacion-integradora-de-conceptos-taskmanager.md`, con el mismo patrón de contenido crudo sin frontmatter (`Nombre de archivo sugerido: paper/raw/...md`). Se movió a `raw/papers/2026-08-03-aplicacion-integradora-de-conceptos-taskmanager.md` antes de procesarlo.
+
+### Páginas creadas en `wiki/sources/`:
+- `wiki/sources/2026-08-03-aplicacion-integradora-de-conceptos-taskmanager.md` — proyecto capstone TaskManager (Python): arquitectura modular, persistencia JSON, API de OpenAI con `.env`/`.gitignore`, tests con `unittest.mock`.
+
+### Páginas de conceptos creadas en `wiki/concepts/`:
+Ninguna — es la primera fuente del wiki que funciona puramente como integración práctica, sin aportar ningún concepto genuinamente nuevo. Toca 14 conceptos ya existentes con código real como evidencia.
+
+### Entidades actualizadas en `wiki/entities/`:
+- `wiki/entities/brais-moure.md` — añadida la fuente TaskManager como proyecto de código de MoureDev; nueva relación con `testing-y-piramide-de-pruebas` y `apis-rest`.
+
+### Conceptos existentes extendidos (cross-refs bidireccionales):
+- `wiki/concepts/testing-y-piramide-de-pruebas.md` — añadido `unittest.mock` (`patch`, `mock_open`) como técnica real de aislamiento de dependencias.
+- `wiki/concepts/apis-rest.md` — añadido el patrón real de gestión de credenciales (`.env` + `python-dotenv` + `.gitignore`).
+
+### Mantenimiento e Índice:
+- `index.md` actualizado: 101 páginas totales, 45 fuentes, 49 conceptos (sin conceptos nuevos). Nueva sección "Proyecto Integrador (Capstone)" en fuentes.
+
+### Insights destacados:
+Esta fuente demuestra el propósito final de todo el LLM Wiki: un proyecto de código real que valida, con evidencia ejecutable, que el conocimiento acumulado en 5 módulos (pensamiento computacional, herramientas, programación, Python, sistemas/redes/datos, buenas prácticas) es coherente y aplicable en conjunto. Su único aporte genuinamente nuevo es un patrón concreto de higiene de seguridad (`.env`/`.gitignore` para credenciales) que hasta ahora solo se había mencionado en abstracto.
+
+---
+
+## [2026-08-03] lint | Health Check
+
+**Tipo:** Health-Check periódico (checklist completo de `.agents/agents/lint.md`)
+**Agente:** Subagente LINT
+**Cobertura:** Primer lint desde `2026-07-30` — abarca las 5 ingestas realizadas desde entonces (Módulo 3 2ª pasada, Módulo 4, Módulo 5, TaskManager, y esta corrección de ubicación de archivos).
+
+### Checklist ejecutado:
+1. **Contradicciones:** 0 encontradas. Se verificaron específicamente los pares de fuentes paralelas (dos "Introducción a Lenguajes de Programación", tres pares de "Conclusiones" de módulo, claims de versión de Python) — todas consistentes.
+2. **Páginas huérfanas:** 0 encontradas. Las 45 fuentes, 49 conceptos y 5 entidades tienen entre 2 y 11 referencias entrantes cada una.
+3. **Conceptos mencionados sin página propia:** 9 términos (`algoritmo-atomico`, `bookkeeping-en-knowledge-bases`, `descomposicion-fina`, `diagnostico-sistematico`, `diagrama-de-flujo`, `happy-path-vs-edge-cases`, `metodo-cientifico-en-software`, `pruebas-de-regresion`, `rag-vs-wiki`) ya evaluados en el lint de `2026-07-30` con 1-2 menciones cada uno — por debajo del umbral de 3+. Se reafirma: sin acción.
+4. **Cross-references faltantes:** 1 encontrada y corregida — `log.md:562` usaba `[[deuda-tecnica-y-refactorizacion]]` sin cualificar en vez de `[[wiki/sources/2026-08-03-deuda-tecnica-y-refactorizacion]]`, violando la regla dura de enlaces cualificados a fuentes.
+5. **Information gaps:** 6 identificados y documentados en el reporte (CI/CD, Docker/contenerización, infraestructura cloud, pytest, gestores de dependencias modernos, desarrollo frontend/JavaScript) — todos ya señalados parcialmente como preguntas abiertas en conceptos existentes, ahora consolidados en un solo lugar.
+6. **`index.md` desactualizado:** la sección "Tags Más Usados" reflejaba solo contenido de los Módulos 0-1. Recalculada con la frecuencia real de todo el vault: `#python` (27), `#programacion` (20), `#arquitectura` (13), `#debugging` (8), `#testing` (7).
+7. **Frontmatter incompleto:** 0 encontrado — las 101 páginas verificadas tienen `type`, `created`, `tags` (y `source` en el caso de fuentes) completos.
+
+### Páginas creadas:
+- `wiki/queries/lint-2026-08-03.md` — reporte completo de este health-check.
+
+### Páginas actualizadas:
+- `log.md` — corrección del enlace sin cualificar en la entrada del Módulo 5.
+- `index.md` — sección "Tags Más Usados" recalculada; nueva entrada en "Queries Archivadas"; estadísticas actualizadas (102 páginas).
+
+### Insights destacados:
+El vault pasó de 71 a 101 páginas en cinco ingestas consecutivas sin acumular deuda de mantenimiento significativa — la única corrección estructural necesaria fue un enlace sin cualificar, y el único desajuste de índice fue una sección de metadatos (tags) que no afecta la navegabilidad real del wiki. Esto confirma que el protocolo de cross-referencing aplicado durante cada ingest (en vez de posponerlo a un lint posterior) es efectivo para mantener la salud del vault incluso bajo crecimiento acelerado.
 
 
 

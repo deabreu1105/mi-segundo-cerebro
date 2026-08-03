@@ -25,7 +25,8 @@ Ingeniero de software, divulgador tecnológico y educador hispanohablante de ref
   - [[wiki/sources/2026-07-30-control-de-versiones-con-git-y-github]]
   - [[wiki/sources/2026-07-30-entornos-de-desarrollo-ide]]
   - [[wiki/sources/2026-07-30-ecosistema-del-desarrollo-de-software-moderno-conclusiones]]
-- Relacionado con: [[big-school]], [[pensamiento-computacional]], [[metodologia-de-debugging]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]]
+  - [[wiki/sources/2026-08-03-aplicacion-integradora-de-conceptos-taskmanager]]
+- Relacionado con: [[big-school]], [[pensamiento-computacional]], [[metodologia-de-debugging]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]], [[testing-y-piramide-de-pruebas]], [[apis-rest]]
 
 ## Notes
-Autor de la serie de documentos técnicos del Módulo 0 del Máster de Desarrollo con Inteligencia Artificial.
+Autor de la serie de documentos técnicos del Módulo 0 del Máster de Desarrollo con Inteligencia Artificial. Su proyecto **MoureDev** aporta el código real (TaskManager) del estudio de caso integrador que cierra el Módulo 5.

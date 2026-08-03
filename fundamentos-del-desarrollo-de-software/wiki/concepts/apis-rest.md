@@ -19,6 +19,7 @@ Una **API** (Application Programming Interface) es un contrato formal entre dos 
 - **Statelessness como principio arquitectónico:** cada petición REST debe contener toda la información necesaria — el servidor no retiene contexto entre peticiones, maximizando la capacidad de escala horizontal.
 - **JSON** es el formato de intercambio estándar: objetos (`{}`) y arrays (`[]`) anidables, agnósticos al lenguaje de programación de cada extremo.
 - **AuthN vs. AuthZ:** Autenticación (¿quién eres?) y Autorización (¿qué puedes hacer?) son conceptos distintos, gestionados con API Keys o Tokens (Bearer/OAuth).
+- **Patrón real de gestión de API Keys en Python:** variable de entorno cargada con `python-dotenv` (`load_dotenv()` + `os.getenv("API_KEY")`) desde un archivo `.env` que se excluye explícitamente en `.gitignore` — la clave nunca vive en el código fuente ni llega al control de versiones.
 - **CORS** es una política del *navegador*, no un fallo de la API: bloquea por defecto peticiones entre dominios distintos salvo autorización explícita del servidor.
 
 ## Applications
@@ -47,6 +48,7 @@ if response.status_code == 200:
 ## Sources
 - [[wiki/sources/2026-08-03-apis-comunicacion]] — API como contrato, principios REST, JSON, AuthN/AuthZ, CORS, ejemplos con `requests`.
 - [[wiki/sources/2026-08-03-conclusiones-fundamentos-sistemas-redes]] — las APIs como "camareros del entorno digital" que habilitan microservicios, síntesis final del Módulo 4.
+- [[wiki/sources/2026-08-03-aplicacion-integradora-de-conceptos-taskmanager]] — patrón real de gestión de credenciales (`.env` + `python-dotenv` + `.gitignore`) al consumir la API de OpenAI.
 
 ## Related Concepts
 [[protocolo-http]], [[redes-y-protocolos-tcp-ip]], [[python-como-lenguaje]], [[modelado-de-datos-y-bases-de-datos]]
@@ -57,4 +59,4 @@ if response.status_code == 200:
 ---
 
 **Última actualización:** 2026-08-03
-**Aparece en:** 2 fuentes
+**Aparece en:** 3 fuentes
