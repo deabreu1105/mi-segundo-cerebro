@@ -18,6 +18,7 @@ La **programación asíncrona** permite que una aplicación inicie una tarea de 
 - Analogía del maestro de ajedrez: no piensa más rápido, simplemente elimina los tiempos muertos entre movimientos.
 - Regla dura: nunca mezclar funciones bloqueantes síncronas (`time.sleep()`) dentro de una corrutina — usar siempre su equivalente asíncrono (`asyncio.sleep()`).
 - **Analogía del maestro de ajedrez:** no piensa más rápido, elimina el tiempo de inactividad moviéndose entre "mesas" (tareas) mientras cada rival (operación I/O) responde.
+- **Es concurrencia, no paralelismo:** `asyncio` ejecuta en un solo hilo mediante *Time-Slicing* cooperativo — cede el control durante la espera de I/O, pero no usa múltiples núcleos físicos simultáneamente. Ver [[fundamentos-de-computacion]] para la distinción formal concurrencia/paralelismo.
 
 ## Applications
 - Interactuar con APIs externas o modelos de IA (OpenAI, Claude) sin bloquear el resto de la aplicación mientras se espera la respuesta.
@@ -53,9 +54,10 @@ async def main():
 - [[wiki/sources/2026-07-30-asincronia-en-python]] — asyncio, async/await, event loop, I/O-bound vs. CPU-bound.
 - [[wiki/sources/2026-08-03-asincronia]] — analogía del maestro de ajedrez, diagrama de secuencia de `asyncio.gather` y aplicabilidad en negocios/IA.
 - [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — la asincronía como "técnica maestra" de agilidad y rendimiento, síntesis final del bloque.
+- [[wiki/sources/2026-08-03-fundamentos-computacion]] — encuadra `asyncio` formalmente como concurrencia cooperativa de un solo hilo, no paralelismo.
 
 ## Related Concepts
-[[funciones-de-orden-superior]], [[python-como-lenguaje]]
+[[funciones-de-orden-superior]], [[python-como-lenguaje]], [[fundamentos-de-computacion]]
 
 ## Open Questions
 - ¿Cómo se combina `asyncio` con paralelismo real de CPU (`multiprocessing`) en aplicaciones con cargas simultáneas I/O-bound y CPU-bound?
@@ -63,4 +65,4 @@ async def main():
 ---
 
 **Última actualización:** 2026-08-03
-**Aparece en:** 3 fuentes
+**Aparece en:** 4 fuentes

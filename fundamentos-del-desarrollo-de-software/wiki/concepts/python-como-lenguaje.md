@@ -53,9 +53,10 @@ age_int = int(age_str)  # Casting explícito
 - [[wiki/sources/2026-08-03-introduccion-lenguajes-programacion-python]] — elección estratégica de Python (perfil en T, tres pilares), convenciones de `snake_case` e inglés como idioma de codificación.
 - [[wiki/sources/2026-08-03-bases-lenguajes-programacion]] — refuerzo de f-strings, casting, indentación crítica y filosofía de comentarios ("por qué", no "qué").
 - [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — Python como estándar de facto en IA, síntesis final del bloque.
+- [[wiki/sources/2026-08-03-apis-comunicacion]] — consumo de APIs REST con la librería `requests` (`GET`/`POST`, `response.json()`).
 
 ## Related Concepts
-[[variables-y-tipos-de-datos]], [[tipado-estatico-vs-dinamico]], [[estructuras-de-datos]], [[paradigmas-de-programacion]], [[mentalidad-de-arquitecto]]
+[[variables-y-tipos-de-datos]], [[tipado-estatico-vs-dinamico]], [[estructuras-de-datos]], [[paradigmas-de-programacion]], [[mentalidad-de-arquitecto]], [[apis-rest]]
 
 ## Open Questions
 - ¿Qué mecanismos de tipado gradual (type hints + mypy) mitigan las desventajas del tipado dinámico en proyectos Python de gran escala?
@@ -63,4 +64,4 @@ age_int = int(age_str)  # Casting explícito
 ---
 
 **Última actualización:** 2026-08-03
-**Aparece en:** 6 fuentes
+**Aparece en:** 7 fuentes

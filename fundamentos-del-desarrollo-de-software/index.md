@@ -1,8 +1,8 @@
 # 📚 Índice del Wiki — Fundamentos del desarrollo de software
 
 > **Última actualización:** 2026-08-03  
-> **Total de páginas:** 80  
-> **Total de fuentes procesadas:** 33
+> **Total de páginas:** 90  
+> **Total de fuentes procesadas:** 38
 
 ---
 
@@ -59,6 +59,13 @@
 - [[wiki/sources/2026-08-03-gestion-entornos-dependencias|2026-08-03-gestion-entornos-dependencias]] — Ciclo de vida de `venv` con diagrama de flujo y ejemplo real de `requirements.txt` por BIG School
 - [[wiki/sources/2026-08-03-asincronia|2026-08-03-asincronia]] — Analogía del maestro de ajedrez, diagrama de secuencia y aplicabilidad en negocios/IA por BIG School
 - [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion|2026-08-03-conclusiones-lenguajes-programacion]] — Cierre paralelo del Módulo 3, misma síntesis con redacción distinta por BIG School
+
+### Módulo 4: Fundamentos de Sistemas, Redes y Datos
+- [[wiki/sources/2026-08-03-fundamentos-computacion|2026-08-03-fundamentos-computacion]] — Binario, arquitectura Von Neumann, jerarquía de memoria, SO, procesos/hilos y concurrencia vs. paralelismo por BIG School
+- [[wiki/sources/2026-08-03-redes|2026-08-03-redes]] — Modelo cliente-servidor, IP/DNS, TCP/UDP, puertos, HTTP, cookies/sesiones y JWT por BIG School
+- [[wiki/sources/2026-08-03-apis-comunicacion|2026-08-03-apis-comunicacion]] — APIs como contrato, arquitectura REST, JSON, AuthN/AuthZ, CORS y consumo con `requests` por BIG School
+- [[wiki/sources/2026-08-03-gestion-datos|2026-08-03-gestion-datos]] — Modelo Entidad-Relación, modelo relacional, SQL CRUD/JOIN, ACID y NoSQL por BIG School
+- [[wiki/sources/2026-08-03-conclusiones-fundamentos-sistemas-redes|2026-08-03-conclusiones-fundamentos-sistemas-redes]] — Síntesis del Módulo 4: hardware, redes, APIs y datos como una sola pila tecnológica por BIG School
 
 ---
 
@@ -131,6 +138,13 @@
 - [[entornos-virtuales-y-dependencias]] — `venv`, `pip`, `requirements.txt` y version pinning
 - [[programacion-asincrona]] — `async`/`await`, event loop e I/O-bound vs. CPU-bound
 
+### Fundamentos de Sistemas, Redes y Datos
+- [[fundamentos-de-computacion]] — Binario, arquitectura Von Neumann, jerarquía de memoria, SO y concurrencia vs. paralelismo
+- [[redes-y-protocolos-tcp-ip]] — Modelo cliente-servidor, IP, DNS, TCP/UDP y puertos
+- [[protocolo-http]] — Métodos HTTP, anatomía de petición/respuesta, códigos de estado, cookies/sesiones y JWT
+- [[apis-rest]] — API como contrato, principios REST, JSON, AuthN/AuthZ y CORS
+- [[modelado-de-datos-y-bases-de-datos]] — Modelo Entidad-Relación, modelo relacional, SQL CRUD/JOIN, ACID y NoSQL
+
 ---
 
 ## 🔍 Queries Archivadas (`wiki/queries/`)
@@ -144,13 +158,13 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Fuentes totales | 33 |
+| Fuentes totales | 38 |
 | Entidades (personas) | 4 |
 | Entidades (orgs/lugares) | 1 |
-| Conceptos | 40 |
+| Conceptos | 45 |
 | Queries archivadas | 2 |
 | Páginas huérfanas | 0 |
-| Última operación | Ingesta Masiva Módulo 3 — Segunda Pasada (9 fuentes, PDFs alternativos) 🟢 |
+| Última operación | Ingesta Módulo 4 — Fundamentos de Sistemas, Redes y Datos (5 fuentes, 5 conceptos nuevos) 🟢 |
 
 ---
 
@@ -175,6 +189,8 @@
 - [[python-como-lenguaje]] — Hub del Módulo 3: conecta sintaxis, tipado, estructuras de datos y paradigmas
 - [[paradigmas-de-programacion]] — Hub de estilos de programación: imperativo, POO, funcional y declarativo
 - [[mentalidad-de-arquitecto]] — Hub estratégico: conecta perfil en T, deuda técnica, modularidad y POO como visión de liderazgo técnico
+- [[fundamentos-de-computacion]] — Hub del Módulo 4: conecta hardware, SO, concurrencia/paralelismo con la asincronía del Módulo 3
+- [[apis-rest]] — Hub de interoperabilidad: conecta HTTP, redes, Python (`requests`) y modelado de datos
 
 ---
 
@@ -188,4 +204,4 @@
 
 ---
 
-**🚀 Estado:** Ingesta masiva de la segunda pasada del Módulo 3 (9 fuentes adicionales, PDFs alternativos del mismo bloque de Python) completada. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.
+**🚀 Estado:** Ingesta del Módulo 4 (Fundamentos de Sistemas, Redes y Datos — 5 fuentes nuevas, 5 conceptos nuevos: hardware, redes, HTTP, APIs REST y bases de datos) completada. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.

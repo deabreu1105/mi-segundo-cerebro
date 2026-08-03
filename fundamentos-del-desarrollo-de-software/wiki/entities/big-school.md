@@ -49,7 +49,12 @@ Academia tecnológica y plataforma de formación avanzada especializada en progr
   - [[wiki/sources/2026-08-03-gestion-entornos-dependencias]]
   - [[wiki/sources/2026-08-03-asincronia]]
   - [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]]
-- Relacionado con: [[brais-moure]], [[pensamiento-computacional]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]], [[funciones-y-parametros]], [[manejo-de-errores-y-excepciones]], [[python-como-lenguaje]], [[programacion-orientada-a-objetos]], [[mentalidad-de-arquitecto]], [[deuda-tecnica]]
+  - [[wiki/sources/2026-08-03-fundamentos-computacion]]
+  - [[wiki/sources/2026-08-03-redes]]
+  - [[wiki/sources/2026-08-03-apis-comunicacion]]
+  - [[wiki/sources/2026-08-03-gestion-datos]]
+  - [[wiki/sources/2026-08-03-conclusiones-fundamentos-sistemas-redes]]
+- Relacionado con: [[brais-moure]], [[pensamiento-computacional]], [[terminal-y-cli]], [[control-de-versiones-git]], [[entornos-de-desarrollo-ide]], [[funciones-y-parametros]], [[manejo-de-errores-y-excepciones]], [[python-como-lenguaje]], [[programacion-orientada-a-objetos]], [[mentalidad-de-arquitecto]], [[deuda-tecnica]], [[fundamentos-de-computacion]], [[apis-rest]], [[modelado-de-datos-y-bases-de-datos]]
 
 ## Notes
-Provee el material académico fuente del Módulo 0 (Fundamentos del Desarrollo de Software), incluyendo el Módulo 2 sobre Fundamentos de la Programación (variables, control de flujo, estructuras de datos, funciones y manejo de errores) y el Módulo 3 sobre Lenguajes de Programación (Python: sintaxis, POO, funcional, modularidad, entornos y asincronía). El 2026-08-03 se incorporó una segunda pasada de 9 fuentes sobre el mismo Módulo 3 (PDFs distintos del mismo bloque de Python), que refuerza y extiende — sin contradecir — el conocimiento ya integrado, aportando ejemplos adicionales (álgebra de conjuntos en sets, `reduce()`, composición de funciones puras, ROI de la modularidad) y el marco del "perfil en T".
+Provee el material académico fuente del Módulo 0 (Fundamentos del Desarrollo de Software), incluyendo el Módulo 2 sobre Fundamentos de la Programación (variables, control de flujo, estructuras de datos, funciones y manejo de errores) y el Módulo 3 sobre Lenguajes de Programación (Python: sintaxis, POO, funcional, modularidad, entornos y asincronía). El 2026-08-03 se incorporó una segunda pasada de 9 fuentes sobre el mismo Módulo 3 (PDFs distintos del mismo bloque de Python), que refuerza y extiende — sin contradecir — el conocimiento ya integrado, aportando ejemplos adicionales (álgebra de conjuntos en sets, `reduce()`, composición de funciones puras, ROI de la modularidad) y el marco del "perfil en T". Ese mismo día se añadió también un **Módulo 4: Fundamentos de Sistemas, Redes y Datos** (hardware/CPU/memoria, redes/TCP-IP/HTTP, APIs/REST, bases de datos SQL/NoSQL) — territorio genuinamente nuevo que motivó la creación de 5 conceptos nuevos en el wiki.

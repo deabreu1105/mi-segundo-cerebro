@@ -56,9 +56,10 @@ Añadir "Verde" --> El Set permanece igual (omite el duplicado)
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — estructuras de datos como "archivadores lógicos".
 - [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — la tupla como estructura inmutable nativa de Python.
 - [[wiki/sources/2026-08-03-bases-lenguajes-programacion]] — álgebra de conjuntos completa sobre sets e iteración de diccionarios con `.items()`.
+- [[wiki/sources/2026-08-03-gestion-datos]] — la tabla relacional (filas/columnas) como analogía persistente en disco del diccionario en memoria.
 
 ## Related Concepts
-[[diseno-de-algoritmos]], [[funciones-y-parametros]], [[pensamiento-computacional]], [[python-como-lenguaje]], [[funciones-puras-y-efectos-secundarios]]
+[[diseno-de-algoritmos]], [[funciones-y-parametros]], [[pensamiento-computacional]], [[python-como-lenguaje]], [[funciones-puras-y-efectos-secundarios]], [[modelado-de-datos-y-bases-de-datos]]
 
 ## Open Questions
 - ¿En qué punto de escala deja de ser preferible una lista/array sobre un mapa cuando la búsqueda por clave es el patrón de acceso dominante?
@@ -66,4 +67,4 @@ Añadir "Verde" --> El Set permanece igual (omite el duplicado)
 ---
 
 **Última actualización:** 2026-08-03
-**Aparece en:** 3 fuentes
+**Aparece en:** 4 fuentes

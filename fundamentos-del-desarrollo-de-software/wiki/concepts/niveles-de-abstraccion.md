@@ -41,7 +41,7 @@ Ambos ejemplos producen el mismo resultado observable, con niveles de abstracci�
 - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion]] — taxonomía completa de niveles de abstracción.
 
 ## Related Concepts
-[[paradigmas-de-programacion]], [[compilacion-e-interpretacion]], [[python-como-lenguaje]]
+[[paradigmas-de-programacion]], [[compilacion-e-interpretacion]], [[python-como-lenguaje]], [[fundamentos-de-computacion]]
 
 ## Open Questions
 - ¿Qué métricas objetivas más allá de "velocidad de ejecución" deberían pesar al comparar dos lenguajes de niveles de abstracción distintos para un mismo proyecto?

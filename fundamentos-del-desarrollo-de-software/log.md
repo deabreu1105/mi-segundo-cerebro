@@ -489,6 +489,46 @@ Ninguna — no se identificó ningún concepto genuinamente nuevo; todo el conte
 ### Insights destacados:
 Esta ingesta confirma que el wiki puede absorber **contenido temáticamente redundante sin duplicar conocimiento**: de 9 fuentes nuevas, cero requirieron una página de concepto nueva — toda la información se integró como extensión de 12 conceptos ya existentes. El caso más claro de valor añadido real es el **perfil en T**, que conecta la elección de un lenguaje troncal (Python) con la mentalidad de arquitecto ya presente desde el Módulo 0, cerrando el círculo entre estrategia profesional y elección técnica concreta.
 
+---
+
+## [2026-08-03] ingest | Módulo 4 — Fundamentos de Sistemas, Redes y Datos
+
+**Tipo:** Ingesta Masiva de Documentos Fuentes (territorio nuevo)
+**Agente:** Subagente INGEST v3.0
+**Fuentes procesadas:** 5 nuevas fuentes en `raw/papers/` (prefijo `2026-08-03-`, PDFs `0_5_1` a `0_5_4` + Conclusiones)
+
+### Contexto y decisión de scope:
+A diferencia de la ingesta anterior (segunda pasada del Módulo 3), estas 5 fuentes cubren **territorio genuinamente nuevo** que no existía en el wiki: hardware/arquitectura de computadores, redes/protocolos, APIs/REST y bases de datos SQL/NoSQL. Se verificó contra `index.md` que ningún concepto previo cubría estos temas antes de proceder. Por eso, a diferencia del lote anterior, esta ingesta **sí crea páginas de concepto nuevas** (5 en total).
+
+### Páginas creadas en `wiki/sources/`:
+- `wiki/sources/2026-08-03-fundamentos-computacion.md`
+- `wiki/sources/2026-08-03-redes.md`
+- `wiki/sources/2026-08-03-apis-comunicacion.md`
+- `wiki/sources/2026-08-03-gestion-datos.md`
+- `wiki/sources/2026-08-03-conclusiones-fundamentos-sistemas-redes.md`
+
+### Páginas de conceptos creadas en `wiki/concepts/`:
+- `wiki/concepts/fundamentos-de-computacion.md` — binario, Von Neumann, jerarquía de memoria, SO, procesos/hilos, concurrencia vs. paralelismo, swapping.
+- `wiki/concepts/redes-y-protocolos-tcp-ip.md` — modelo cliente-servidor, IP, DNS, TCP/UDP, puertos.
+- `wiki/concepts/protocolo-http.md` — métodos HTTP, anatomía de petición/respuesta, códigos de estado, cookies/sesiones, JWT.
+- `wiki/concepts/apis-rest.md` — API como contrato, principios REST, JSON, AuthN/AuthZ, CORS.
+- `wiki/concepts/modelado-de-datos-y-bases-de-datos.md` — modelo ER, cardinalidad, modelo relacional, PK/FK, normalización, SQL CRUD/JOIN, ACID, NoSQL.
+
+### Entidades actualizadas en `wiki/entities/`:
+- `wiki/entities/big-school.md` — 5 nuevas fuentes añadidas a "Mentions & Connections"; nota sobre el nuevo Módulo 4.
+
+### Conceptos existentes extendidos (cross-refs bidireccionales):
+- `wiki/concepts/programacion-asincrona.md` — precisado formalmente como concurrencia cooperativa de un solo hilo (no paralelismo), vía `fundamentos-de-computacion`.
+- `wiki/concepts/niveles-de-abstraccion.md` — cross-ref a `fundamentos-de-computacion` como la capa de abstracción más baja.
+- `wiki/concepts/python-como-lenguaje.md` — añadido el consumo de APIs REST con la librería `requests`.
+- `wiki/concepts/estructuras-de-datos.md` — cross-ref a la tabla relacional como analogía persistente del diccionario en memoria.
+
+### Mantenimiento e Índice:
+- `index.md` actualizado: 90 páginas totales, 38 fuentes, 45 conceptos (+5 nuevos). Nueva sección "Módulo 4: Fundamentos de Sistemas, Redes y Datos" en fuentes y conceptos. Dos hubs nuevos (`fundamentos-de-computacion`, `apis-rest`).
+
+### Insights destacados:
+La distinción **concurrencia vs. paralelismo** (nueva en este módulo) llenó un hueco conceptual que `programacion-asincrona` había dejado implícito desde el Módulo 3: `asyncio` es concurrencia cooperativa de un solo hilo, no paralelismo real — una precisión que solo pudo hacerse explícita al bajar hasta el nivel de hardware/SO. El Módulo 4 cierra además el círculo completo de la "pila tecnológica" del curso: hardware → redes → APIs → datos, con cada capa dependiendo de la anterior.
+
 
 
 
