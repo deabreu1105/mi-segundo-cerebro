@@ -17,11 +17,13 @@ La **programación asíncrona** permite que una aplicación inicie una tarea de 
 - **`asyncio.gather()`** ejecuta múltiples corrutinas de forma concurrente: dos tareas de 5 segundos cada una completan en ~5s totales, no 10s.
 - Analogía del maestro de ajedrez: no piensa más rápido, simplemente elimina los tiempos muertos entre movimientos.
 - Regla dura: nunca mezclar funciones bloqueantes síncronas (`time.sleep()`) dentro de una corrutina — usar siempre su equivalente asíncrono (`asyncio.sleep()`).
+- **Analogía del maestro de ajedrez:** no piensa más rápido, elimina el tiempo de inactividad moviéndose entre "mesas" (tareas) mientras cada rival (operación I/O) responde.
 
 ## Applications
 - Interactuar con APIs externas o modelos de IA (OpenAI, Claude) sin bloquear el resto de la aplicación mientras se espera la respuesta.
 - Servidores web que atienden múltiples peticiones concurrentes sin necesitar un hilo por petición.
 - Sincronización eficiente entre microservicios y bases de datos distribuidas.
+- Consultar simultáneamente varios modelos de IA (ej. un LLM de texto + un motor de análisis de imagen) para generar un informe consolidado.
 
 ## Examples
 ```python
@@ -49,6 +51,8 @@ async def main():
 
 ## Sources
 - [[wiki/sources/2026-07-30-asincronia-en-python]] — asyncio, async/await, event loop, I/O-bound vs. CPU-bound.
+- [[wiki/sources/2026-08-03-asincronia]] — analogía del maestro de ajedrez, diagrama de secuencia de `asyncio.gather` y aplicabilidad en negocios/IA.
+- [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — la asincronía como "técnica maestra" de agilidad y rendimiento, síntesis final del bloque.
 
 ## Related Concepts
 [[funciones-de-orden-superior]], [[python-como-lenguaje]]
@@ -58,5 +62,5 @@ async def main():
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 1 fuente
+**Última actualización:** 2026-08-03
+**Aparece en:** 3 fuentes

@@ -46,6 +46,8 @@ def calcular_precio_con_iva(precio_base, cantidad):
 - [[wiki/sources/2026-07-30-variables-tipos-de-datos-y-operadores]] — nomenclatura de variables como herramienta directa de mantenimiento.
 - [[wiki/sources/2026-07-30-modularidad-en-python]] — código monolítico sin modularidad como fuente directa de deuda técnica.
 - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales]] — la arquitectura modular como freno al crecimiento exponencial de la deuda técnica.
+- [[wiki/sources/2026-08-03-modularidad-arquitectura-software]] — el software monolítico como "condenado a la obsolescencia técnica prematura"; ROI de la modularidad en tiempo de rampa y auditoría aislada.
+- [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — la arquitectura modular como "único camino viable" para escalar sin deuda técnica exponencial, síntesis final del bloque.
 
 ## Related Concepts
 [[mentalidad-de-arquitecto]], [[variables-y-tipos-de-datos]], [[metodologia-de-debugging]], [[modularidad-modulos-y-paquetes]], [[entornos-virtuales-y-dependencias]]
@@ -55,5 +57,5 @@ def calcular_precio_con_iva(precio_base, cantidad):
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 3 fuentes
+**Última actualización:** 2026-08-03
+**Aparece en:** 5 fuentes

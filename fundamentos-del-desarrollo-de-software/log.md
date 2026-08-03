@@ -441,6 +441,54 @@ El eje **paso por valor vs. por referencia** y **scope/lifetime** aparece primer
 ### Insights destacados:
 La Tupla de Python llenó un hueco real en `estructuras-de-datos` (el Módulo 2 nunca cubrió estructuras inmutables). La inmutabilidad conecta tres conceptos que antes vivían separados: `estructuras-de-datos` (tupla), `funciones-puras-y-efectos-secundarios` (determinismo) y `paso-por-valor-vs-referencia` (mutación por referencia) — los tres describen la misma propiedad desde ángulos distintos.
 
+---
+
+## [2026-08-03] ingest | Ingesta Masiva Módulo 3 — Segunda Pasada (PDFs Alternativos de Lenguajes de Programación / Python)
+
+**Tipo:** Ingesta Masiva de Documentos Fuentes
+**Agente:** Subagente INGEST v3.0
+**Fuentes procesadas:** 9 nuevas fuentes en `raw/papers/` (prefijo `2026-08-03-`)
+
+### Contexto y decisión de scope:
+Las 9 fuentes cubren el mismo terreno temático que el Módulo 3 ya ingerido el 2026-07-30 (introducción a lenguajes, bases de Python, POO, funcional, modularidad, entornos/dependencias, asincronía, conclusiones), pero provienen de PDFs distintos ("Máster Desarrollo con IA") con redacción, analogías y ejemplos propios. Se verificó contenido real de cada archivo antes de procesar: **no son duplicados** — aportan matices, ejemplos de código adicionales y en algunos casos una dimensión estratégica/de negocio ausente en la primera pasada (perfil en T, ROI de la modularidad, aplicabilidad de la asincronía en IA). Se optó por crear 9 páginas de fuente nuevas y **extender los conceptos existentes en vez de duplicarlos**, siguiendo el patrón ya usado en la ingesta del Módulo 3 original.
+
+### Páginas creadas en `wiki/sources/`:
+- `wiki/sources/2026-08-03-introduccion-lenguajes-programacion-python.md`
+- `wiki/sources/2026-08-03-bases-lenguajes-programacion.md`
+- `wiki/sources/2026-08-03-programacion-orientada-objetos.md`
+- `wiki/sources/2026-08-03-programacion-funcional.md`
+- `wiki/sources/2026-08-03-modularidad-python-modulos-paquetes.md`
+- `wiki/sources/2026-08-03-modularidad-arquitectura-software.md`
+- `wiki/sources/2026-08-03-gestion-entornos-dependencias.md`
+- `wiki/sources/2026-08-03-asincronia.md`
+- `wiki/sources/2026-08-03-conclusiones-lenguajes-programacion.md`
+
+### Páginas de conceptos creadas en `wiki/concepts/`:
+Ninguna — no se identificó ningún concepto genuinamente nuevo; todo el contenido se integró extendiendo conceptos ya existentes del Módulo 3.
+
+### Entidades actualizadas en `wiki/entities/`:
+- `wiki/entities/big-school.md` — 9 nuevas fuentes añadidas a "Mentions & Connections"; nota añadida sobre la naturaleza de segunda pasada de este lote.
+
+### Conceptos existentes extendidos (sin duplicar, cross-refs bidireccionales):
+- `wiki/concepts/python-como-lenguaje.md` — añadidos los tres pilares de elección estratégica, convenciones `snake_case`/inglés, requisito de versión ≥3.10 (6 fuentes en total).
+- `wiki/concepts/mentalidad-de-arquitecto.md` — añadido el marco del **perfil en T** (amplitud vs. profundidad); promovido a hub del índice.
+- `wiki/concepts/compilacion-e-interpretacion.md` — refuerzo de Python como interpretado (2 fuentes).
+- `wiki/concepts/estructuras-de-datos.md` — añadida el álgebra de conjuntos completa sobre sets (unión/intersección/diferencia/diferencia simétrica) y la iteración de diccionarios con `.items()`.
+- `wiki/concepts/manejo-de-errores-y-excepciones.md`, `wiki/concepts/funciones-y-parametros.md` — refuerzo del patrón `try/except ValueError` y parámetros por defecto.
+- `wiki/concepts/programacion-orientada-a-objetos.md` — segundo ejemplo de dominio (biblioteca) que confirma el mismo modelo de los cuatro pilares.
+- `wiki/concepts/funciones-de-orden-superior.md` — añadido `reduce()` (ausente en la primera pasada) y composición de funciones puras encadenadas.
+- `wiki/concepts/funciones-puras-y-efectos-secundarios.md` — añadida la analogía de la "cadena de montaje".
+- `wiki/concepts/modularidad-modulos-y-paquetes.md` — añadido el impacto en ROI (tiempo de rampa, auditoría aislada) y el riesgo de colisión de nombres.
+- `wiki/concepts/deuda-tecnica.md` — nueva fuente sobre el software monolítico como generador directo de deuda técnica.
+- `wiki/concepts/entornos-virtuales-y-dependencias.md` — diagrama de flujo del ciclo de vida y ejemplo real de `requirements.txt` con version pinning.
+- `wiki/concepts/programacion-asincrona.md` — analogía del maestro de ajedrez y aplicabilidad en negocios/IA.
+
+### Mantenimiento e Índice:
+- `index.md` actualizado: 80 páginas totales, 33 fuentes, 40 conceptos (sin conceptos nuevos). Nueva sección "Módulo 3 (Segunda Pasada): Lenguajes de Programación (Python) — PDFs Alternativos" en fuentes. Un hub nuevo (`mentalidad-de-arquitecto`).
+
+### Insights destacados:
+Esta ingesta confirma que el wiki puede absorber **contenido temáticamente redundante sin duplicar conocimiento**: de 9 fuentes nuevas, cero requirieron una página de concepto nueva — toda la información se integró como extensión de 12 conceptos ya existentes. El caso más claro de valor añadido real es el **perfil en T**, que conecta la elección de un lenguaje troncal (Python) con la mentalidad de arquitecto ya presente desde el Módulo 0, cerrando el círculo entre estrategia profesional y elección técnica concreta.
+
 
 
 

@@ -17,6 +17,7 @@ Una **función de primera clase** es aquella que un lenguaje trata como cualquie
 - **`filter(función_booleana, iterable)`** conserva solo los elementos para los que la función devuelve `True`.
 - **`lambda`** define funciones anónimas de una sola línea (`lambda parametros: expresion`), útiles como argumento rápido de `map`/`filter`/`sorted`.
 - Python favorece las **List/Dict Comprehensions** sobre encadenar múltiples `map()`/`filter()` por legibilidad superior ("estilo pythónico").
+- **`reduce(función, iterable)`** (de `functools`) combina todos los elementos de una secuencia en un único valor acumulado — cierra la tríada clásica `map`/`filter`/`reduce`.
 
 ## Applications
 - Transformación y filtrado declarativo de colecciones sin bucles explícitos.
@@ -44,6 +45,8 @@ pares_al_cuadrado = [x ** 2 for x in numeros if x % 2 == 0]  # Preferido sobre m
 ## Sources
 - [[wiki/sources/2026-07-30-programacion-funcional]] — funciones de primera clase, orden superior, lambda, map/filter/comprehensions.
 - [[wiki/sources/2026-07-30-asincronia-en-python]] — corrutinas como funciones de primera clase pasadas a `asyncio.gather`.
+- [[wiki/sources/2026-08-03-programacion-funcional]] — añade `reduce()` y composición de funciones puras encadenadas en list comprehensions.
+- [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — la programación funcional como salto de calidad hacia transformaciones predecibles, síntesis final del bloque.
 
 ## Related Concepts
 [[funciones-puras-y-efectos-secundarios]], [[funciones-y-parametros]], [[paradigmas-de-programacion]]
@@ -53,5 +56,5 @@ pares_al_cuadrado = [x ** 2 for x in numeros if x % 2 == 0]  # Preferido sobre m
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 2 fuentes
+**Última actualización:** 2026-08-03
+**Aparece en:** 4 fuentes

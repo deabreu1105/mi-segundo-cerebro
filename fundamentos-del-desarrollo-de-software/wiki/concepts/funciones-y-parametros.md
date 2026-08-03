@@ -45,6 +45,7 @@ VARIABLE factura = CalcularPrecioTotal(100, 0.19)
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — funciones como "transición a la artesanía técnica".
 - [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — parámetros con valor por defecto en Python (`rate=0.21`).
 - [[wiki/sources/2026-07-30-programacion-orientada-a-objetos]] — `self` como caso particular de parámetro implícito en métodos de instancia.
+- [[wiki/sources/2026-08-03-bases-lenguajes-programacion]] — refuerzo de parámetros por defecto y docstrings como documentación embebida.
 
 ## Related Concepts
 [[paso-por-valor-vs-referencia]], [[scope-y-lifetime]], [[funciones-puras-y-efectos-secundarios]], [[descomposicion]], [[programacion-orientada-a-objetos]]
@@ -54,5 +55,5 @@ VARIABLE factura = CalcularPrecioTotal(100, 0.19)
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 2 fuentes
+**Última actualización:** 2026-08-03
+**Aparece en:** 3 fuentes

@@ -1,8 +1,8 @@
 # 📚 Índice del Wiki — Fundamentos del desarrollo de software
 
-> **Última actualización:** 2026-07-30  
-> **Total de páginas:** 71  
-> **Total de fuentes procesadas:** 24
+> **Última actualización:** 2026-08-03  
+> **Total de páginas:** 80  
+> **Total de fuentes procesadas:** 33
 
 ---
 
@@ -48,6 +48,17 @@
 - [[wiki/sources/2026-07-30-gestion-de-entornos-y-dependencias|2026-07-30-gestion-de-entornos-y-dependencias]] — Entornos virtuales (`venv`), `pip` y `requirements.txt` por BIG School
 - [[wiki/sources/2026-07-30-asincronia-en-python|2026-07-30-asincronia-en-python]] — `asyncio`, `async`/`await`, event loop e I/O-bound vs. CPU-bound por BIG School
 - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales|2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales]] — Síntesis del Módulo 3: Python, funcional, asincronía y modularidad por BIG School
+
+### Módulo 3 (Segunda Pasada): Lenguajes de Programación (Python) — PDFs Alternativos
+- [[wiki/sources/2026-08-03-introduccion-lenguajes-programacion-python|2026-08-03-introduccion-lenguajes-programacion-python]] — Perfil en T, elección estratégica de Python y convenciones (`snake_case`, inglés) por BIG School
+- [[wiki/sources/2026-08-03-bases-lenguajes-programacion|2026-08-03-bases-lenguajes-programacion]] — Sintaxis básica reforzada: álgebra de conjuntos en sets, `.items()` en diccionarios, filosofía de comentarios por BIG School
+- [[wiki/sources/2026-08-03-programacion-orientada-objetos|2026-08-03-programacion-orientada-objetos]] — Segundo ejemplo de dominio (biblioteca `Libro`/`Revista`/`DVD`) de los cuatro pilares de POO por BIG School
+- [[wiki/sources/2026-08-03-programacion-funcional|2026-08-03-programacion-funcional]] — Funciones puras, `reduce()` y composición de funciones encadenadas por BIG School
+- [[wiki/sources/2026-08-03-modularidad-python-modulos-paquetes|2026-08-03-modularidad-python-modulos-paquetes]] — Caso de estudio completo de las cuatro sintaxis de importación por BIG School
+- [[wiki/sources/2026-08-03-modularidad-arquitectura-software|2026-08-03-modularidad-arquitectura-software]] — La modularidad como estrategia de ingeniería y ROI (no solo sintaxis) por BIG School
+- [[wiki/sources/2026-08-03-gestion-entornos-dependencias|2026-08-03-gestion-entornos-dependencias]] — Ciclo de vida de `venv` con diagrama de flujo y ejemplo real de `requirements.txt` por BIG School
+- [[wiki/sources/2026-08-03-asincronia|2026-08-03-asincronia]] — Analogía del maestro de ajedrez, diagrama de secuencia y aplicabilidad en negocios/IA por BIG School
+- [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion|2026-08-03-conclusiones-lenguajes-programacion]] — Cierre paralelo del Módulo 3, misma síntesis con redacción distinta por BIG School
 
 ---
 
@@ -133,13 +144,13 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Fuentes totales | 24 |
+| Fuentes totales | 33 |
 | Entidades (personas) | 4 |
 | Entidades (orgs/lugares) | 1 |
 | Conceptos | 40 |
 | Queries archivadas | 2 |
 | Páginas huérfanas | 0 |
-| Última operación | Ingesta Masiva Módulo 3 (Lenguajes de Programación / Python) 🟢 |
+| Última operación | Ingesta Masiva Módulo 3 — Segunda Pasada (9 fuentes, PDFs alternativos) 🟢 |
 
 ---
 
@@ -163,6 +174,7 @@
 - [[variables-y-tipos-de-datos]] — Hub de la materia prima de datos: tipado, scope y deuda técnica
 - [[python-como-lenguaje]] — Hub del Módulo 3: conecta sintaxis, tipado, estructuras de datos y paradigmas
 - [[paradigmas-de-programacion]] — Hub de estilos de programación: imperativo, POO, funcional y declarativo
+- [[mentalidad-de-arquitecto]] — Hub estratégico: conecta perfil en T, deuda técnica, modularidad y POO como visión de liderazgo técnico
 
 ---
 
@@ -176,4 +188,4 @@
 
 ---
 
-**🚀 Estado:** Ingesta masiva del Módulo 3 (Lenguajes de Programación / Python) completada. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.
+**🚀 Estado:** Ingesta masiva de la segunda pasada del Módulo 3 (9 fuentes adicionales, PDFs alternativos del mismo bloque de Python) completada. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.

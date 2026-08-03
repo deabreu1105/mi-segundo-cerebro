@@ -49,6 +49,7 @@ class DVD(LibraryItem):
 ## Sources
 - [[wiki/sources/2026-07-30-programacion-orientada-a-objetos]] — anatomía del objeto y los tres pilares con ejemplos progresivos.
 - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion]] — POO como uno de los paradigmas principales.
+- [[wiki/sources/2026-08-03-programacion-orientada-objetos]] — segundo ejemplo de dominio (biblioteca `Libro`/`Revista`/`DVD`) que confirma el mismo modelo de los cuatro pilares, con un caso de encapsulación (`CuentaBancaria`) más desarrollado.
 
 ## Related Concepts
 [[paradigmas-de-programacion]], [[python-como-lenguaje]], [[funciones-y-parametros]]
@@ -58,5 +59,5 @@ class DVD(LibraryItem):
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 2 fuentes
+**Última actualización:** 2026-08-03
+**Aparece en:** 3 fuentes

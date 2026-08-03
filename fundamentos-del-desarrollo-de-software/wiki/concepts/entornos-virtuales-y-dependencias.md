@@ -48,6 +48,8 @@ pip install -r requirements.txt
 
 ## Sources
 - [[wiki/sources/2026-07-30-gestion-de-entornos-y-dependencias]] — venv, pip y requirements.txt en detalle.
+- [[wiki/sources/2026-08-03-gestion-entornos-dependencias]] — diagrama de flujo del ciclo de vida completo y ejemplo real de `requirements.txt` con version pinning.
+- [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — entornos virtuales como "única vía" para reproducibilidad, síntesis final del bloque.
 
 ## Related Concepts
 [[modularidad-modulos-y-paquetes]], [[deuda-tecnica]], [[python-como-lenguaje]]
@@ -57,5 +59,5 @@ pip install -r requirements.txt
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 1 fuente
+**Última actualización:** 2026-08-03
+**Aparece en:** 3 fuentes

@@ -18,11 +18,15 @@ related: [variables-y-tipos-de-datos, tipado-estatico-vs-dinamico, estructuras-d
 - **Casting explícito** con funciones builtin (`int()`, `float()`, `str()`) para convertir entre tipos y evitar errores de incompatibilidad.
 - **Multiparadigma:** incorpora herramientas funcionales (`map`, `filter`, `lambda`, comprehensions) y orientadas a objetos (clases, herencia, polimorfismo) sin imponer un único estilo.
 - **Indentación como sintaxis de bloque**, reemplazando las llaves `{}` de otros lenguajes.
+- **Tres pilares de la elección estratégica:** legibilidad/eficiencia, versatilidad multidisciplinar ("navaja suiza") y predominio en el ecosistema de IA/Ciencia de Datos.
+- **Convenciones no negociables:** `snake_case` para variables/funciones y el **inglés como idioma estándar de codificación** (`user_name`, no `nombre_usuario`) — garantiza mantenibilidad en equipos globales.
+- **Requisito de versión:** verificar Python ≥ 3.10 para compatibilidad con librerías modernas de IA.
 
 ## Applications
 - Prototipado rápido y desarrollo de modelos de IA/Machine Learning (ecosistema maduro: NumPy, pandas, PyTorch, etc.).
 - Scripting de automatización y herramientas internas gracias a su curva de aprendizaje baja.
 - Dirección y validación de código generado por LLMs — el "lenguaje común" para supervisar salidas de IA.
+- Elección de Python como lenguaje troncal en un [[mentalidad-de-arquitecto|perfil en T]]: la profundidad en Python sostiene la amplitud de aprendizaje de tecnologías futuras.
 
 ## Examples
 ```python
@@ -46,14 +50,17 @@ age_int = int(age_str)  # Casting explícito
 - [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — sintaxis básica: variables, f-strings, casting, control de flujo, estructuras de datos, funciones y excepciones.
 - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion]] — Python como ejemplo de lenguaje muy alto nivel e interpretado.
 - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales]] — Python como estándar de facto en IA y ciencia de datos.
+- [[wiki/sources/2026-08-03-introduccion-lenguajes-programacion-python]] — elección estratégica de Python (perfil en T, tres pilares), convenciones de `snake_case` e inglés como idioma de codificación.
+- [[wiki/sources/2026-08-03-bases-lenguajes-programacion]] — refuerzo de f-strings, casting, indentación crítica y filosofía de comentarios ("por qué", no "qué").
+- [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — Python como estándar de facto en IA, síntesis final del bloque.
 
 ## Related Concepts
-[[variables-y-tipos-de-datos]], [[tipado-estatico-vs-dinamico]], [[estructuras-de-datos]], [[paradigmas-de-programacion]]
+[[variables-y-tipos-de-datos]], [[tipado-estatico-vs-dinamico]], [[estructuras-de-datos]], [[paradigmas-de-programacion]], [[mentalidad-de-arquitecto]]
 
 ## Open Questions
 - ¿Qué mecanismos de tipado gradual (type hints + mypy) mitigan las desventajas del tipado dinámico en proyectos Python de gran escala?
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 3 fuentes
+**Última actualización:** 2026-08-03
+**Aparece en:** 6 fuentes

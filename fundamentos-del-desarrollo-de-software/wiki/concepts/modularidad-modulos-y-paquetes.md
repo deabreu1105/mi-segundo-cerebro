@@ -17,6 +17,8 @@ La **modularidad** es la estrategia de ingeniería que fragmenta la complejidad 
 - **Paquete:** carpeta con módulos + `__init__.py`, que notifica al intérprete que debe tratarse como paquete ejecutable.
 - Cuatro sintaxis de importación, de más explícita a más abreviada: `import paquete.modulo`, `from paquete import modulo`, `from paquete.modulo import funcion`, `import paquete.modulo as alias`.
 - Beneficios: organización por responsabilidad, reusabilidad sin duplicar lógica, mantenibilidad (un fix se propaga a todo el sistema) y colaboración sin conflictos de Git entre desarrolladores trabajando en módulos independientes.
+- **Impacto en ROI:** la modularidad reduce el tiempo de rampa de nuevos desarrolladores, minimiza el riesgo de fallos en cascada y permite auditorías de seguridad/rendimiento aisladas sin reconstruir la aplicación completa.
+- **Riesgo técnico concreto:** dos módulos con el mismo nombre en rutas distintas pueden generar comportamientos erráticos en el cargador de memoria de Python — evitar colisión de nombres con librerías estándar o de terceros.
 
 ## Applications
 - Separar responsabilidades lógicas de un proyecto en archivos/carpetas independientes en vez de un único script gigante.
@@ -49,14 +51,17 @@ palabras = matematicas.contar_palabras(mi_frase)
 
 ## Sources
 - [[wiki/sources/2026-07-30-modularidad-en-python]] — módulos, paquetes, `__init__.py` y sintaxis de importación.
+- [[wiki/sources/2026-08-03-modularidad-python-modulos-paquetes]] — caso de estudio completo con las cuatro sintaxis de importación aplicadas y extensión de un módulo sin romper su contrato.
+- [[wiki/sources/2026-08-03-modularidad-arquitectura-software]] — la modularidad como estrategia de ingeniería y decisión de ROI, no solo sintaxis (analogía de la metrópolis y el "garaje especializado").
+- [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — la modularización como transformación del desarrollador en "arquitecto de sistemas", síntesis final del bloque.
 
 ## Related Concepts
-[[descomposicion]], [[deuda-tecnica]], [[entornos-virtuales-y-dependencias]], [[python-como-lenguaje]]
+[[descomposicion]], [[deuda-tecnica]], [[entornos-virtuales-y-dependencias]], [[python-como-lenguaje]], [[mentalidad-de-arquitecto]]
 
 ## Open Questions
 - ¿En qué punto de crecimiento de un paquete conviene subdividirlo en subpaquetes anidados en vez de añadir más módulos planos?
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 1 fuente
+**Última actualización:** 2026-08-03
+**Aparece en:** 4 fuentes

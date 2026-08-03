@@ -40,6 +40,7 @@ Representación en código máquina (binario) del texto `"Hola"` tras la traducc
 ## Sources
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-introduccion-y-sintaxis]] — la dualidad código fuente / código máquina.
 - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion]] — extensión con el tercer modelo híbrido/JIT y clasificación por lenguaje.
+- [[wiki/sources/2026-08-03-introduccion-lenguajes-programacion-python]] — reafirma a Python como lenguaje interpretado, priorizando flexibilidad y retroalimentación inmediata.
 
 ## Related Concepts
 [[sintaxis-y-semantica]], [[niveles-de-abstraccion]]
@@ -49,5 +50,5 @@ Representación en código máquina (binario) del texto `"Hola"` tras la traducc
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 1 fuente
+**Última actualización:** 2026-08-03
+**Aparece en:** 2 fuentes

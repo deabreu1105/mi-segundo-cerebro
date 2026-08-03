@@ -19,6 +19,8 @@ Las estructuras de datos son las distintas formas de organizar información en m
 - **Mapa/Diccionario (*Hash Table*):** pares clave-valor con claves únicas, acceso casi instantáneo O(1) mediante hashing.
 - **Set:** colección no ordenada que garantiza automáticamente la ausencia de duplicados.
 - **Tupla:** secuencia ordenada e **inmutable** — una vez creada no puede modificarse (intentarlo provoca un error). Es el ejemplo canónico de estructura de datos inmutable, base de la programación funcional segura en concurrencia.
+- **Álgebra de conjuntos sobre Sets (Python):** unión (`|` / `.union()`), intersección (`&` / `.intersection()`), diferencia (`-` / `.difference()`) y diferencia simétrica (`^` / `.symmetric_difference()`) — cada operador tiene un método equivalente explícito.
+- **Diccionario (Python):** se itera con `.items()`, que devuelve pares `(clave, valor)` en cada vuelta — el acceso es siempre semántico por clave, nunca por posición numérica.
 
 ## Applications
 - Elegir Array vs. Lista según si el tamaño de los datos es conocido de antemano.
@@ -53,6 +55,7 @@ Añadir "Verde" --> El Set permanece igual (omite el duplicado)
 - [[wiki/sources/2026-07-30-estructuras-de-datos]] — taxonomía completa y cuadro comparativo.
 - [[wiki/sources/2026-07-30-fundamentos-de-la-programacion-conclusiones]] — estructuras de datos como "archivadores lógicos".
 - [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — la tupla como estructura inmutable nativa de Python.
+- [[wiki/sources/2026-08-03-bases-lenguajes-programacion]] — álgebra de conjuntos completa sobre sets e iteración de diccionarios con `.items()`.
 
 ## Related Concepts
 [[diseno-de-algoritmos]], [[funciones-y-parametros]], [[pensamiento-computacional]], [[python-como-lenguaje]], [[funciones-puras-y-efectos-secundarios]]
@@ -62,5 +65,5 @@ Añadir "Verde" --> El Set permanece igual (omite el duplicado)
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 2 fuentes
+**Última actualización:** 2026-08-03
+**Aparece en:** 3 fuentes

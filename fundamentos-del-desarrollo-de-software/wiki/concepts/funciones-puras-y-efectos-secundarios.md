@@ -44,6 +44,7 @@ def agregar_item(lista):
 ## Sources
 - [[wiki/sources/2026-07-30-funciones-y-parametros]] — distinción entre funciones puramente computacionales y funciones con efectos secundarios.
 - [[wiki/sources/2026-07-30-programacion-funcional]] — funciones puras e inmutabilidad como pilares del paradigma funcional en Python.
+- [[wiki/sources/2026-08-03-programacion-funcional]] — analogía de la "cadena de montaje" y contraste impuro/puro con `.copy()` sobre listas.
 
 ## Related Concepts
 [[funciones-y-parametros]], [[paso-por-valor-vs-referencia]], [[funciones-de-orden-superior]], [[estructuras-de-datos]]
@@ -53,5 +54,5 @@ def agregar_item(lista):
 
 ---
 
-**Última actualización:** 2026-07-30
-**Aparece en:** 1 fuente
+**Última actualización:** 2026-08-03
+**Aparece en:** 2 fuentes
