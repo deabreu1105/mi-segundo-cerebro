@@ -17,6 +17,7 @@ Una **función** (método, rutina, subprograma) es un bloque de código reutiliz
 - Los argumentos pueden pasarse [[paso-por-valor-vs-referencia|por valor o por referencia]], con consecuencias distintas sobre si la función puede o no modificar el dato original.
 - `RETURN` finaliza la función y devuelve un resultado; las funciones **VOID** ejecutan acciones sin devolver valor explícito.
 - **Principio de Responsabilidad Única (SRP):** cada función debe hacer una sola tarea bien definida; si crece demasiado, debe refactorizarse.
+- **"Función monstruo":** patología común donde una sola función mezcla acceso a datos, lógica de negocio y presentación — difícil de testear y propensa a errores en cascada; se corrige descomponiéndola en funciones pequeñas y enfocadas (ver [[estilo-de-codigo-y-convenciones]] y [[refactorizacion]]).
 
 ## Applications
 - Encapsular lógica de negocio reutilizable (`CalcularPrecioTotal`, `ValidarUsuario`).
@@ -46,9 +47,10 @@ VARIABLE factura = CalcularPrecioTotal(100, 0.19)
 - [[wiki/sources/2026-07-30-bases-de-los-lenguajes-de-programacion]] — parámetros con valor por defecto en Python (`rate=0.21`).
 - [[wiki/sources/2026-07-30-programacion-orientada-a-objetos]] — `self` como caso particular de parámetro implícito en métodos de instancia.
 - [[wiki/sources/2026-08-03-bases-lenguajes-programacion]] — refuerzo de parámetros por defecto y docstrings como documentación embebida.
+- [[wiki/sources/2026-08-03-estilo-del-codigo]] — ejemplo completo de refactor de "función monstruo" (`process_user_data`) a funciones enfocadas por SRP.
 
 ## Related Concepts
-[[paso-por-valor-vs-referencia]], [[scope-y-lifetime]], [[funciones-puras-y-efectos-secundarios]], [[descomposicion]], [[programacion-orientada-a-objetos]]
+[[paso-por-valor-vs-referencia]], [[scope-y-lifetime]], [[funciones-puras-y-efectos-secundarios]], [[descomposicion]], [[programacion-orientada-a-objetos]], [[estilo-de-codigo-y-convenciones]], [[refactorizacion]]
 
 ## Open Questions
 - ¿Cuántos parámetros posicionales son razonables antes de que una función deba refactorizarse para recibir un objeto de configuración?
@@ -56,4 +58,4 @@ VARIABLE factura = CalcularPrecioTotal(100, 0.19)
 ---
 
 **Última actualización:** 2026-08-03
-**Aparece en:** 3 fuentes
+**Aparece en:** 4 fuentes

@@ -529,6 +529,69 @@ A diferencia de la ingesta anterior (segunda pasada del Módulo 3), estas 5 fuen
 ### Insights destacados:
 La distinción **concurrencia vs. paralelismo** (nueva en este módulo) llenó un hueco conceptual que `programacion-asincrona` había dejado implícito desde el Módulo 3: `asyncio` es concurrencia cooperativa de un solo hilo, no paralelismo real — una precisión que solo pudo hacerse explícita al bajar hasta el nivel de hardware/SO. El Módulo 4 cierra además el círculo completo de la "pila tecnológica" del curso: hardware → redes → APIs → datos, con cada capa dependiendo de la anterior.
 
+---
+
+## [2026-08-03] mantenimiento | Corrección de 6 archivos mal ubicados en `wiki/sources/`
+
+**Tipo:** Corrección de integridad estructural del vault (previa al ingest)
+**Agente:** Subagente INGEST v3.0
+
+### Hallazgo:
+Al escanear `raw/` vs. `wiki/sources/` para identificar fuentes pendientes, se detectaron **6 archivos en `wiki/sources/` sin ningún `raw/` correspondiente** — la situación inversa a la habitual. Inspección de su contenido reveló que no eran páginas de wiki procesadas: carecían de frontmatter YAML, comenzaban con la línea literal `Nombre de archivo sugerido: paper/raw/...md` y tenían la estructura de un PDF convertido, no de una síntesis. `git status` confirmó que estaban **sin seguimiento** (nunca comprometidos), consistente con un depósito manual reciente en la carpeta equivocada.
+
+### Acción correctiva:
+Se movieron los 6 archivos de `wiki/sources/` a `raw/papers/` (su ubicación correcta, además auto-declarada en la primera línea de cada archivo):
+- `raw/papers/2026-08-03-estilo-del-codigo.md`
+- `raw/papers/2026-08-03-depuracion-debugging-y-logging.md`
+- `raw/papers/2026-08-03-testing.md`
+- `raw/papers/2026-08-03-deuda-tecnica-y-refactorizacion.md`
+- `raw/papers/2026-08-03-etica-en-el-desarrollo.md`
+- `raw/papers/2026-08-03-conclusiones-buenas-practicas-desarrollo-software.md`
+
+Ningún archivo de `raw/` fue modificado en el proceso (solo reubicado desde una ubicación incorrecta fuera de la carpeta inmutable); no se violó la regla de inmutabilidad de `raw/`.
+
+---
+
+## [2026-08-03] ingest | Módulo 5 — Buenas Prácticas del Desarrollo de Software
+
+**Tipo:** Ingesta Masiva de Documentos Fuentes (territorio nuevo)
+**Agente:** Subagente INGEST v3.0
+**Fuentes procesadas:** 6 nuevas fuentes en `raw/papers/` (recién reubicadas, ver entrada de mantenimiento anterior)
+
+### Contexto y decisión de scope:
+Igual que el Módulo 4, estas 6 fuentes cubren territorio mayormente nuevo (estilo de código, testing, ética), aunque dos de ellas ([[deuda-tecnica-y-refactorizacion]]) profundizan significativamente un concepto ya existente desde el Módulo 0 ([[deuda-tecnica]]). Se crean 4 conceptos nuevos y se extienden 6 conceptos existentes.
+
+### Páginas creadas en `wiki/sources/`:
+- `wiki/sources/2026-08-03-estilo-del-codigo.md`
+- `wiki/sources/2026-08-03-depuracion-debugging-y-logging.md`
+- `wiki/sources/2026-08-03-testing.md`
+- `wiki/sources/2026-08-03-deuda-tecnica-y-refactorizacion.md`
+- `wiki/sources/2026-08-03-etica-en-el-desarrollo.md`
+- `wiki/sources/2026-08-03-conclusiones-buenas-practicas-desarrollo-software.md`
+
+### Páginas de conceptos creadas en `wiki/concepts/`:
+- `wiki/concepts/estilo-de-codigo-y-convenciones.md` — PEP 8, nomenclatura, números mágicos, docstrings, linters/formatters.
+- `wiki/concepts/testing-y-piramide-de-pruebas.md` — tests unitarios/integración/E2E, `unittest`.
+- `wiki/concepts/refactorizacion.md` — mejora estructural sin alterar comportamiento externo, "Regla de Oro" de los tests.
+- `wiki/concepts/etica-y-responsabilidad-en-el-desarrollo.md` — sesgos algorítmicos, privacidad por diseño (GDPR), licencias Open Source.
+
+### Entidades actualizadas en `wiki/entities/`:
+- `wiki/entities/big-school.md` — 6 nuevas fuentes añadidas a "Mentions & Connections"; nota sobre el Módulo 5 y la corrección de ubicación.
+
+### Conceptos existentes extendidos (cross-refs bidireccionales):
+- `wiki/concepts/deuda-tecnica.md` — taxonomía explícita de causas (presión de negocio, falta de testing, tecnología obsoleta) y consecuencias (ralentización, erosión del talento, onboarding costoso).
+- `wiki/concepts/funciones-y-parametros.md` — ejemplo de refactor de "función monstruo" por SRP.
+- `wiki/concepts/breakpoints.md` — Step Over/Step Into/Inspect con `pdb`/VS Code.
+- `wiki/concepts/analisis-de-logs.md` — nivel `DEBUG` añadido a la jerarquía; módulo `logging` de Python.
+- `wiki/concepts/metodologia-de-debugging.md` — escalera de madurez `print()` → `pdb`/IDE → `logging`.
+- `wiki/concepts/soberania-humana-en-ia.md` — el profesional como última línea de defensa contra sesgos algorítmicos.
+
+### Mantenimiento e Índice:
+- `index.md` actualizado: 100 páginas totales, 44 fuentes, 49 conceptos (+4 nuevos). Nueva sección "Módulo 5: Buenas Prácticas del Desarrollo de Software" en fuentes y conceptos. Un hub nuevo (`deuda-tecnica`).
+
+### Insights destacados:
+Este módulo resuelve explícitamente una pregunta abierta que el propio wiki había señalado desde el lint del Módulo 2 ("¿qué fuente futura cubriría testing automatizado?") — cerrando un gap de conocimiento identificado varias sesiones atrás. Además, el hallazgo de los 6 archivos mal ubicados confirma el valor del protocolo de escaneo bidireccional (`raw/` → `wiki/sources/` y viceversa): no basta con buscar pendientes en `raw/`, también hay que vigilar que `wiki/sources/` no contenga contenido crudo sin procesar depositado por error.
+
 
 
 

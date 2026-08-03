@@ -16,6 +16,9 @@ La **deuda técnica** es el coste futuro acumulado de decisiones de diseño o im
 - El enfoque de "ensayo y error" en debugging, en vez de un método científico estructurado, genera deuda técnica oculta que resurge más tarde como bugs difíciles de rastrear.
 - La adopción de una [[mentalidad-de-arquitecto]] es lo que evita su acumulación descontrolada y la obsolescencia del sistema ante la automatización generativa.
 - No es inherentemente negativa — como la deuda financiera, puede ser una herramienta consciente (lanzar rápido, refactorizar después), pero se vuelve peligrosa cuando es involuntaria o no se salda nunca.
+- **Taxonomía de causas:** presión de negocio (fechas imposibles), falta de contexto/comprensión del problema, código de mala calidad (funciones largas, duplicación, nombres pobres), **falta de testing** (un código sin tests es, por definición, deuda latente), tecnología obsoleta.
+- **Consecuencias tangibles en ROI y equipo:** ralentización operativa (lo que tomaba horas empieza a tomar días), aumento de fragilidad/bugs, erosión del talento (rotación por frustración), obstáculos a la formación de nuevos miembros (onboarding más costoso).
+- **El remedio disciplinado es la [[refactorizacion]]**, nunca reescribir desde cero — y solo con una suite de tests como red de seguridad ("Regla de Oro").
 
 ## Applications
 - Priorización de refactors en un backlog: cuantificar qué deuda técnica bloquea más velocidad futura.
@@ -48,9 +51,10 @@ def calcular_precio_con_iva(precio_base, cantidad):
 - [[wiki/sources/2026-07-30-introduccion-a-los-lenguajes-de-programacion-conclusiones-generales]] — la arquitectura modular como freno al crecimiento exponencial de la deuda técnica.
 - [[wiki/sources/2026-08-03-modularidad-arquitectura-software]] — el software monolítico como "condenado a la obsolescencia técnica prematura"; ROI de la modularidad en tiempo de rampa y auditoría aislada.
 - [[wiki/sources/2026-08-03-conclusiones-lenguajes-programacion]] — la arquitectura modular como "único camino viable" para escalar sin deuda técnica exponencial, síntesis final del bloque.
+- [[wiki/sources/2026-08-03-deuda-tecnica-y-refactorizacion]] — taxonomía explícita de causas y consecuencias, y la refactorización como disciplina de saneamiento.
 
 ## Related Concepts
-[[mentalidad-de-arquitecto]], [[variables-y-tipos-de-datos]], [[metodologia-de-debugging]], [[modularidad-modulos-y-paquetes]], [[entornos-virtuales-y-dependencias]]
+[[mentalidad-de-arquitecto]], [[variables-y-tipos-de-datos]], [[metodologia-de-debugging]], [[modularidad-modulos-y-paquetes]], [[entornos-virtuales-y-dependencias]], [[refactorizacion]], [[testing-y-piramide-de-pruebas]]
 
 ## Open Questions
 - ¿Qué métrica objetiva permite cuantificar deuda técnica más allá de la intuición o revisión manual de código?
@@ -58,4 +62,4 @@ def calcular_precio_con_iva(precio_base, cantidad):
 ---
 
 **Última actualización:** 2026-08-03
-**Aparece en:** 5 fuentes
+**Aparece en:** 6 fuentes

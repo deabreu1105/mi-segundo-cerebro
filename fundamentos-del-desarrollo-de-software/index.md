@@ -1,8 +1,8 @@
 # 📚 Índice del Wiki — Fundamentos del desarrollo de software
 
 > **Última actualización:** 2026-08-03  
-> **Total de páginas:** 90  
-> **Total de fuentes procesadas:** 38
+> **Total de páginas:** 100  
+> **Total de fuentes procesadas:** 44
 
 ---
 
@@ -66,6 +66,14 @@
 - [[wiki/sources/2026-08-03-apis-comunicacion|2026-08-03-apis-comunicacion]] — APIs como contrato, arquitectura REST, JSON, AuthN/AuthZ, CORS y consumo con `requests` por BIG School
 - [[wiki/sources/2026-08-03-gestion-datos|2026-08-03-gestion-datos]] — Modelo Entidad-Relación, modelo relacional, SQL CRUD/JOIN, ACID y NoSQL por BIG School
 - [[wiki/sources/2026-08-03-conclusiones-fundamentos-sistemas-redes|2026-08-03-conclusiones-fundamentos-sistemas-redes]] — Síntesis del Módulo 4: hardware, redes, APIs y datos como una sola pila tecnológica por BIG School
+
+### Módulo 5: Buenas Prácticas del Desarrollo de Software
+- [[wiki/sources/2026-08-03-estilo-del-codigo|2026-08-03-estilo-del-codigo]] — PEP 8, reglas de nomenclatura, números mágicos, SRP, docstrings y linters/formatters por BIG School
+- [[wiki/sources/2026-08-03-depuracion-debugging-y-logging|2026-08-03-depuracion-debugging-y-logging]] — De `print()` a `pdb`/VS Code y `logging` en producción, con caso de estudio de un bug real por BIG School
+- [[wiki/sources/2026-08-03-testing|2026-08-03-testing]] — Pirámide de testing (unitarios/integración/E2E) y `unittest` por BIG School
+- [[wiki/sources/2026-08-03-deuda-tecnica-y-refactorizacion|2026-08-03-deuda-tecnica-y-refactorizacion]] — Causas y consecuencias de la deuda técnica, refactorización y la "Regla de Oro" de los tests por BIG School
+- [[wiki/sources/2026-08-03-etica-en-el-desarrollo|2026-08-03-etica-en-el-desarrollo]] — Responsabilidad civil del código, sesgos algorítmicos, privacidad por diseño (GDPR) y licencias Open Source por BIG School
+- [[wiki/sources/2026-08-03-conclusiones-buenas-practicas-desarrollo-software|2026-08-03-conclusiones-buenas-practicas-desarrollo-software]] — Síntesis del Módulo 5: estilo, debugging, testing, deuda técnica y ética como una sola disciplina por BIG School
 
 ---
 
@@ -145,6 +153,12 @@
 - [[apis-rest]] — API como contrato, principios REST, JSON, AuthN/AuthZ y CORS
 - [[modelado-de-datos-y-bases-de-datos]] — Modelo Entidad-Relación, modelo relacional, SQL CRUD/JOIN, ACID y NoSQL
 
+### Buenas Prácticas del Desarrollo de Software
+- [[estilo-de-codigo-y-convenciones]] — PEP 8, reglas de nomenclatura, números mágicos, docstrings y linters/formatters
+- [[refactorizacion]] — Mejorar la estructura interna del código sin alterar su comportamiento externo, con tests como precondición
+- [[testing-y-piramide-de-pruebas]] — Tests unitarios, de integración y E2E; `unittest` en Python
+- [[etica-y-responsabilidad-en-el-desarrollo]] — Responsabilidad civil del código, sesgos algorítmicos, privacidad por diseño y licencias Open Source
+
 ---
 
 ## 🔍 Queries Archivadas (`wiki/queries/`)
@@ -158,13 +172,13 @@
 
 | Métrica | Valor |
 |---------|-------|
-| Fuentes totales | 38 |
+| Fuentes totales | 44 |
 | Entidades (personas) | 4 |
 | Entidades (orgs/lugares) | 1 |
-| Conceptos | 45 |
+| Conceptos | 49 |
 | Queries archivadas | 2 |
 | Páginas huérfanas | 0 |
-| Última operación | Ingesta Módulo 4 — Fundamentos de Sistemas, Redes y Datos (5 fuentes, 5 conceptos nuevos) 🟢 |
+| Última operación | Ingesta Módulo 5 — Buenas Prácticas del Desarrollo de Software (6 fuentes, 4 conceptos nuevos) 🟢 |
 
 ---
 
@@ -191,6 +205,7 @@
 - [[mentalidad-de-arquitecto]] — Hub estratégico: conecta perfil en T, deuda técnica, modularidad y POO como visión de liderazgo técnico
 - [[fundamentos-de-computacion]] — Hub del Módulo 4: conecta hardware, SO, concurrencia/paralelismo con la asincronía del Módulo 3
 - [[apis-rest]] — Hub de interoperabilidad: conecta HTTP, redes, Python (`requests`) y modelado de datos
+- [[deuda-tecnica]] — Hub de madurez profesional: conecta refactorización, testing, mentalidad de arquitecto y estilo de código
 
 ---
 
@@ -204,4 +219,4 @@
 
 ---
 
-**🚀 Estado:** Ingesta del Módulo 4 (Fundamentos de Sistemas, Redes y Datos — 5 fuentes nuevas, 5 conceptos nuevos: hardware, redes, HTTP, APIs REST y bases de datos) completada. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.
+**🚀 Estado:** Ingesta del Módulo 5 (Buenas Prácticas del Desarrollo de Software — 6 fuentes nuevas, 4 conceptos nuevos: estilo de código, testing, refactorización, ética) completada. Las 6 fuentes se encontraron mal ubicadas en `wiki/sources/` y se reubicaron a `raw/papers/` antes de procesarlas. Todas las fuentes de `raw/` procesadas. Vault 100% Saludable.
